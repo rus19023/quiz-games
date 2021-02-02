@@ -33,7 +33,7 @@
       "category":"Networking",
       "type":"multiple",
       "difficulty":"easy",
-      "question":"A workstation has been assigned the following IP addressing information: IP address: 192.168.1.26, Subnet mask: 255.255.255.0, Default gateway: 192.168.1.254, DNS server: 192.168.1.. Given this information, what is the IP address of the network where this host resides? ",
+      "question":"A workstation has been assigned the following IP addressing information: IP address: 192.168.1.26, Subnet mask: 255.255.255.0, Default gateway: 192.168.1.254, DNS server: 192.168.1. Given this information, what is the IP address of the network where this host resides? ",
       "correct_answer":"192.168.1.0",
       "incorrect_answers":["192.168.0.0","192.0.0.0","192.168.1.255"],
       "explanation":""
@@ -114,9 +114,9 @@
       "category":"Networking",
       "type":"multiple",
       "difficulty":"easy",
-      "question":"Which of the following accurately describe how switches and hubs work? (Select two.) ",
+      "question":"Which of the following accurately describe how switches and hubs work?",
       "correct_answer":["Switches use the hardware address in the frame to send it only to the port where the device is located, A hub repeats frames to all ports, regardless of the destination address."],
-      "incorrect_answers":["A switch uses the logical addresses in a packet to send it through the correct port to all VLANs defined on that port.","A hub uses the hardware address in the frame to forward it to the hosts on the VLAN that corresponds to that address."],
+      "incorrect_answers":["A switch uses the logical addresses in a packet to send it through the correct port to all VLANs defined on that port.","A hub uses the hardware address in the frame to forward it to the hosts on the VLAN that corresponds to that address.", "Switches and hubs repeat frames to all ports, regardless of the destination address."],
       "explanation":""
       },
     {

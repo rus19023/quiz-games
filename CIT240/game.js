@@ -11,6 +11,8 @@ let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
+let bonus = document.getElementById('bonus-text');
+let bonusText = "";
 //let answers = 0;
 
 // my added variables for bonus and grade score
@@ -84,7 +86,7 @@ fetch('questions.json')
 //CONSTANTS
 const CORRECT_BONUS = 100;
 const CORRECT_POINTS = 10;
-const MAX_QUESTIONS = 10;
+const MAX_QUESTIONS = 30;
 
 startGame = () => {
     questionCounter = 0;
@@ -140,41 +142,68 @@ choices.forEach((choice) => {
         // if answer is correct
         if (classToApply === 'correct') {
             //debugger;
+
             // set last answer correct to true so it can be counted for consecutive bonus
             lastCorrect = true;
             // add this correct answer to consecutive total
-            if (lastCorrect) {
-                ++consecutiveCorrect;
-                //console.log('consecutiveCorrect: ' + consecutiveCorrect);
+            ++consecutiveCorrect;
+                       
+            // add points for correct answer
+            incrementScore(CORRECT_POINTS);               
+            
+            // calculate and add bonus points
+            switch (consecutiveCorrect) {
+                case 5:
+                    incrementScore(CORRECT_BONUS);
+                    console.log('1st level bonus level consecutive questions answered correctly, add bonus')
+                    break;
+                case 10:
+                    incrementScore(CORRECT_BONUS * 3);
+                    break;
+                case 15:
+                    incrementScore(CORRECT_BONUS * 4);
+                    break;
+                case 20:
+                    incrementScore(CORRECT_BONUS * 5);
+                    break;
+                case 25:
+                    incrementScore(CORRECT_BONUS * 10);
+                    break;
+                default:
+                    break;
+                }  // end bonus added to score
+            } else {
+                lastCorrect = false;
+                consecutiveCorrect = 0;                       
+            }  // end answer is correct
 
-                // add points for correct answer
-                incrementScore(CORRECT_POINTS);
-                
-                // bonuses for consecutive correct answers!
-                switch (consecutiveCorrect) {
-                    case 5:
-                        incrementScore(CORRECT_BONUS);
-                        console.log('1st level bonus level consecutive questions answered correctly, add bonus')
+            // start feedback selection 
+            if (consecutiveCorrect === 0) {
+                bonusText = "Uh Oh, starting over! <br> Don't give up, try again!";
+            } else {  // consecutive correct > 0
+                // show bonus text to give feedback
+                switch (consecutiveCorrect > 0 &&consecutiveCorrect%5) {
+                    case 0:
+                        bonusText = "You did it!!!  <br> You got the bonus!";
                         break;
-                    case 10:
-                        incrementScore(CORRECT_BONUS * 3);
+                    case 1:
+                        bonusText = "Great start!  <br> Only 4 more to go for your next bonus!";
                         break;
-                    case 15:
-                        incrementScore(CORRECT_BONUS * 4);
+                    case 2:
+                        bonusText = "Keep going!  <br> Only 3 more to go for your next bonus!";
                         break;
-                    case 20:
-                        incrementScore(CORRECT_BONUS * 5);
+                    case 3:
+                        bonusText = "You're getting there! <br> Only 2 more to go for your next bonus!";
                         break;
-                    case 25:
-                        incrementScore(CORRECT_BONUS * 10);
+                    case 4:
+                        bonusText = "You got this!  <br> Only 1 more to go for your next bonus!";
                         break;
                     default:
+                        bonusText = "Uh Oh, starting over! <br> Don't give up, try again!";
                         break;
-                }
-            } else {
-                consecutiveCorrect = 0;
-            }
-        }
+                } // end feedback switch
+                bonus.innerHTML = bonusText;
+            }  // end feedback if statement
         console.log(" questionCounter: " + questionCounter + '  consecutiveCorrect: ' + consecutiveCorrect );
         //grade = totalCorrect/questionCounter;
         //incrementScore(grade);
