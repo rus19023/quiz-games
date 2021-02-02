@@ -179,32 +179,33 @@ choices.forEach((choice) => {
             }  // end answer is correct
 
             // start feedback selection 
+            
+            // show bonus text to give feedback
+            switch (consecutiveCorrect > 0 &&consecutiveCorrect%5) {
+                case 0:
+                    bonusText = "You did it!!!  <br> You got the bonus!";
+                    break;
+                case 1:
+                    bonusText = "Great start!  <br> Only 4 more to go for your next bonus!";
+                    break;
+                case 2:
+                    bonusText = "Keep going!  <br> Only 3 more to go for your next bonus!";
+                    break;
+                case 3:
+                    bonusText = "You're getting there! <br> Only 2 more to go for your next bonus!";
+                    break;
+                case 4:
+                    bonusText = "You got this!  <br> Only 1 more to go for your next bonus!";
+                    break;
+                default:
+                    bonusText = "Uh Oh, starting over! <br> Don't give up, try again!";
+                    break;
+            } // end feedback switch
+            
             if (consecutiveCorrect === 0) {
                 bonusText = "Uh Oh, starting over! <br> Don't give up, try again!";
-            } else {  // consecutive correct > 0
-                // show bonus text to give feedback
-                switch (consecutiveCorrect > 0 &&consecutiveCorrect%5) {
-                    case 0:
-                        bonusText = "You did it!!!  <br> You got the bonus!";
-                        break;
-                    case 1:
-                        bonusText = "Great start!  <br> Only 4 more to go for your next bonus!";
-                        break;
-                    case 2:
-                        bonusText = "Keep going!  <br> Only 3 more to go for your next bonus!";
-                        break;
-                    case 3:
-                        bonusText = "You're getting there! <br> Only 2 more to go for your next bonus!";
-                        break;
-                    case 4:
-                        bonusText = "You got this!  <br> Only 1 more to go for your next bonus!";
-                        break;
-                    default:
-                        bonusText = "Uh Oh, starting over! <br> Don't give up, try again!";
-                        break;
-                } // end feedback switch
-                bonus.innerHTML = bonusText;
-            }  // end feedback if statement
+            }            
+            bonus.innerHTML = bonusText;
         console.log(" questionCounter: " + questionCounter + '  consecutiveCorrect: ' + consecutiveCorrect );
         //grade = totalCorrect/questionCounter;
         //incrementScore(grade);

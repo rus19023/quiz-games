@@ -35,7 +35,7 @@
   font-weight: bold;
 }
 
-.question { font-size: 1em; color: gold; }
+#question { font-size: 2em; color: gold; }
 
 .correct {
   background: #28a745;
