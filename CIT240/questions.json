@@ -1,0 +1,168 @@
+{
+  "response_code":0,
+  "results":
+  [
+    {
+      "category":"Networking ",
+      "type":"boolean",
+      "difficulty":"easy",
+      "question":"169.254.0.1 - 169.254.255.254 is one of the ranges of private IP addresses that are commonly used behind a NAT router.",
+      "correct_answer":"False",
+      "incorrect_answers":["True","",""],
+      "explanation":"169.254.0.1 - 169.254.255.254 is the range of IP addresses assigned to Windows DHCP clients if a DHCP server does not assign the client an IP address. This range is known as the Automatic Private IP Addressing (APIPA) range. The other three ranges listed in this question are defined as the private IP addresses from RFC 1918 which are commonly used behind a NAT server."
+      },
+    {
+      "category":"Networking",
+      "type":"multiple",
+      "difficulty":"easy",
+      "question":"Given that an IPv4 address is a 32-bit binary number represented in four octets (four 8-bit values), which of the following are valid IP addresses? ",
+      "correct_answer":"137.65.1.1",
+      "incorrect_answers":["137.65.1.257","256.1.1.1","10.256.1.1"],
+      "explanation":""
+      },
+    {
+      "category":"Networking",
+      "type":"boolean",
+      "difficulty":"easy",
+      "question":"The correct binary form of the decimal IP address 192.168.1.1 is 11000000.10101000.00000001.00000001",
+      "correct_answer":"True",
+      "incorrect_answers":["False","",""],
+      "explanation":""
+      },
+    {
+      "category":"Networking",
+      "type":"multiple",
+      "difficulty":"easy",
+      "question":"A workstation has been assigned the following IP addressing information: IP address: 192.168.1.26, Subnet mask: 255.255.255.0, Default gateway: 192.168.1.254, DNS server: 192.168.1.. Given this information, what is the IP address of the network where this host resides? ",
+      "correct_answer":"192.168.1.0",
+      "incorrect_answers":["192.168.0.0","192.0.0.0","192.168.1.255"],
+      "explanation":""
+      },
+    {
+      "category":"Networking",
+      "type":"boolean",
+      "difficulty":"easy",
+      "question":"127.99.1.155 and 10.244.12.16 are private IP addresses.",
+      "correct_answer":"True",
+      "incorrect_answers":["False","",""],
+      "explanation":"Private addresses fall within the following range: 10.0.0.0 to 10.255.255.255, 172.16.0.0 to 172.31.255.255 and 192.168.0.0 to 192.168.255.255. Private addresses are used only within a private network, and cannot be used on the Internet. A service such as Network Address Translation (NAT) is required to translate private addresses into a public address."
+      },
+    {
+      "category":"Networking",
+      "type":"multiple",
+      "difficulty":"easy",
+      "question":"What is the correct decimal form of this binary IP address: 00001010.00000000.01100100.00011101 ",
+      "correct_answer":"10.0.100.29",
+      "incorrect_answers":["137.0.65.11","192.0.1.26","10.0.65.29"],
+      "explanation":""
+      },
+    {
+      "category":"Networking",
+      "type":"boolean",
+      "difficulty":"easy",
+      "question":" 142.15.6.1  is a valid IP address for a host on a public network.",
+      "correct_answer":"True",
+      "incorrect_answers":["False","",""],
+      "explanation": "A public network is a network that does not limit traffic to members of a corporation or other group. The Internet is an example of a public network. Certain sets of IP addresses are reserved for private networks only and cannot be used on public networks. They are: 10.0.0.0 - 10.255.255.255, 172.16.0.0 - 172.31.255.255 and 192.168.0.0 - 192.168.255.255"
+      },
+    {
+      "category":"Networking",
+      "type":"multiple",
+      "difficulty":"easy",
+      "question":"A network host has an IP address of 137.65.1.2 assigned to it. Given that the network uses the default classful subnet mask, what is the default routing prefix for this address? ",
+      "correct_answer":"/16",
+      "incorrect_answers":["/24","/8","/32"],
+      "explanation":"Because 137.65.1.2 falls within the range of 128.0.0.0 to 191.255.255.255, it is a class B address and uses a default subnet mask of 255.255.0.0. Therefore, the default routing prefix is /16. /8 is the default routing prefix for class A IP addresses, while /24 is the default routing prefix for class C IP addresses. A default routing prefix of /32 would use all available bits in an IPv4 address for the network address, leaving no host addresses available."
+      },
+    {
+      "category":"Networking",
+      "type":"boolean",
+      "difficulty":"easy",
+      "question":"A workstation on your company network that has Internet access is most likely to be assigned a public IP address.",
+      "correct_answer":"False",
+      "incorrect_answers":["True","",""],
+      "explanation":"To connect a private network, home or business, to the Internet, you must have a router with a public IP address. The public address allows hosts on the Internet to send packets to the router. To connect a private network, home or business, to the Internet, you must have a router with a public IP address. The public address allows hosts on the Internet to send packets to the router. When connecting a private network to the Internet, only the router interface connected to the Internet needs a public address. You can then use Network Address Translation (NAT) and assign private addresses to hosts on your private network (including all routers on the private network). The NAT router translates your private addresses into the public address. You can even use NAT to place publicly available hosts, such as web servers, on the private network (although these servers are often placed in a special subnet connected to the Internet and assigned public addresses). With port address translation, incoming messages sent to the publicly available servers are relayed to the private network. Servers that hold confidential data, such as database servers, are normally placed on the private network, and can only be contacted directly by the necessary devices (such as a web server)."
+      },
+    {
+      "category":"Networking",
+      "type":"multiple",
+      "difficulty":"easy",
+      "question":" A network host has an IP address of 10.10.0.2 assigned to it. Given that the network uses the default classful subnet mask, what is the default routing prefix for this address?",
+      "correct_answer":"/8",
+      "incorrect_answers":["/24","/16","/32"],
+      "explanation":"Because 10.10.0.2 falls within the range of 1.0.0.0 to 126.255.255.255, it is a class A address and uses a default subnet mask of 255.0.0.0. Therefore, the default routing prefix is /8. /16 is the default routing prefix for class B IP addresses, while /24 is the default routing prefix for class C IP addresses. A default routing prefix of /32 would use all available bits in an IPv4 address for the network address, leaving no host addresses available."
+      },
+    {
+      "category":"Networking",
+      "type":"boolean",
+      "difficulty":"easy",
+      "question":"Your network uses a network address of 137.65.0.0 with a subnet mask of 255.255.0.0.  65534 addresses are available for assignment to network hosts on this network. ",
+      "correct_answer":"True",
+      "incorrect_answers":["False","",""],
+      "explanation":"Given a network address and subnet mask, you can have 2 to the nth power - 2 hosts per subnet. Begin by converting the subnet mask to a binary number. To find the number of valid hosts, n = the number of unmasked bits in the mask. In this example, there are 16 unmasked bits in the mask. Therefore, the number of available hosts is 2 to the 16th power - 2, which equals 65534."
+      },
+    {
+      "category":"Networking",
+      "type":"multiple",
+      "difficulty":"easy",
+      "question":" You want to implement an Ethernet network using the 1000BaseT standard using the minimum hardware specifications possible. Which of the following should you include in your plan",
+      "correct_answer":"Cat5e twisted pair cable and RJ-45 connectors",
+      "incorrect_answers":["Multi-mode fiber optic cable and LC connectors","Cat5 twisted pair cable","Single-mode fiber optic cable and ST connectors","Cat4 twisted pair cable"],
+      "explanation":""
+      },
+    {
+      "category":"Networking",
+      "type":"multiple",
+      "difficulty":"easy",
+      "question":"Which of the following accurately describe how switches and hubs work? (Select two.) ",
+      "correct_answer":["Switches use the hardware address in the frame to send it only to the port where the device is located, A hub repeats frames to all ports, regardless of the destination address."],
+      "incorrect_answers":["A switch uses the logical addresses in a packet to send it through the correct port to all VLANs defined on that port.","A hub uses the hardware address in the frame to forward it to the hosts on the VLAN that corresponds to that address."],
+      "explanation":""
+      },
+    {
+      "category":"Networking",
+      "type":"boolean",
+      "difficulty":"easy",
+      "question":" You need to connect several network devices together using twisted pair Ethernet cables. Assuming Auto-MDI/MDIX is not enabled on these devices, you would connect Router to switch using Straight-through Ethernet cable",
+      "correct_answer":"True",
+      "incorrect_answers":["False","",""],
+      "explanation":""
+      },
+    {
+      "category":"Networking",
+      "type":"boolean",
+      "difficulty":"easy",
+      "question":" You need to connect several network devices together using twisted pair Ethernet cables. Assuming Auto-MDI/MDIX is not enabled on these devices, you would connect Workstation to switch using Straight-through Ethernet cable",
+      "correct_answer": "False",
+      "incorrect_answers": ["True","",""],
+      "explanation":""
+      },
+    {
+      "category":"Networking",
+      "type":"boolean",
+      "difficulty":"easy",
+      "question":" You need to connect several network devices together using twisted pair Ethernet cables. Assuming Auto-MDI/MDIX is not enabled on these devices, you would connect Switch to switch using Crossover Ethernet cable ",
+      "correct_answer":"True",
+      "incorrect_answers":["False","",""],
+      "explanation":""
+      },
+    {
+      "category":"Networking",
+      "type":"boolean",
+      "difficulty":"easy",
+      "question":" You need to connect several network devices together using twisted pair Ethernet cables. Assuming Auto-MDI/MDIX is not enabled on these devices, you would connect Workstation to router using Crossover Ethernet cable",
+      "correct_answer":"True",
+      "incorrect_answers":["False","",""],
+      "explanation":""
+      },
+    {
+      "category":"Networking",
+      "type":"boolean",
+      "difficulty":"easy",
+      "question":" You need to connect several network devices together using twisted pair Ethernet cables. Assuming Auto-MDI/MDIX is not enabled on these devices, you would connect Router to router using Straight-through Ethernet cable",
+      "correct_answer":"False",
+      "incorrect_answers":["True","",""],
+      "explanation":""
+    }
+  ]
+}

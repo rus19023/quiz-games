@@ -1,0 +1,134 @@
+{
+  "response_code":0,
+  "results":
+  [
+    {
+      "category":"Networking",
+      "type":"multiple",
+      "difficulty":"easy",
+      "question":" You want to implement an Ethernet network using the 1000BaseT standard using the minimum hardware specifications possible. Which of the following should you include in your plan? (Select two.)",
+      "correct_answer":["Cat5e twisted pair cable","RJ-45 connectors"],
+      "incorrect_answers":["Multi-mode fiber optic cable","LC connectors","Cat5 twisted pair cable","Single-mode fiber optic cable","Cat4 twisted pair cable"]
+      },
+      {
+        "category":"Networking",
+        "type":"multiple",
+        "difficulty":"easy",
+        "question":"Which of the following accurately describe how switches and hubs work? (Select two.) ",
+        "correct_answer":["Switches use the hardware address in the frame to send it only to the port where the device is located.","A hub repeats frames to all ports, regardless of the destination address."],
+        "incorrect_answers":["A switch uses the logical addresses in a packet to send it through the correct port to all VLANs defined on that port.","A hub uses the hardware address in the frame to forward it to the hosts on the VLAN that corresponds to that address."]
+        },
+      {
+        "category":"Networking",
+        "type":"multiple",
+        "difficulty":"easy",
+        "question":"Which of the following statements are true about bridges? (Choose two.) ",
+        "correct_answer":["",""],
+        "incorrect_answers":["","",""]
+        },
+      {
+        "category":"Networking",
+        "type":"multiple",
+        "difficulty":"easy",
+        "question":" ",
+        "correct_answer":["Bridges broadcast messages from one network segment to another.","Bridges connect two network segments with the same network address."],
+        "incorrect_answers":["","",""]
+        },
+      {
+        "category":"Networking",
+        "type":"multiple",
+        "difficulty":"easy",
+        "question":"",
+        "correct_answer":[" "," ",""," ",""],
+        "incorrect_answers":["","",""]
+        },
+      {
+        "category":"Networking",
+        "type":"boolean",
+        "difficulty":"easy",
+        "question":" You need to connect several network devices together using twisted pair Ethernet cables. Assuming Auto-MDI/MDIX is not enabled on these devices, you would connect Router to switch using Straight-through Ethernet cable",
+        "correct_answer":"True",
+        "incorrect_answers":["False"]
+        },
+      {
+        "category":"Networking",
+        "type":"boolean",
+        "difficulty":"easy",
+        "question":" You need to connect several network devices together using twisted pair Ethernet cables. Assuming Auto-MDI/MDIX is not enabled on these devices, you would connect Workstation to switch using Straight-through Ethernet cable",
+        "correct_answer": "False",
+        "incorrect_answers": ["True","",""]
+        },
+      {
+        "category":"Networking",
+        "type":"boolean",
+        "difficulty":"easy",
+        "question":" You need to connect several network devices together using twisted pair Ethernet cables. Assuming Auto-MDI/MDIX is not enabled on these devices, you would connect Switch to switch using Crossover Ethernet cable ",
+        "correct_answer":"True",
+        "incorrect_answers":["False","",""]
+        },
+      {
+        "category":"Networking",
+        "type":"boolean",
+        "difficulty":"easy",
+        "question":" You need to connect several network devices together using twisted pair Ethernet cables. Assuming Auto-MDI/MDIX is not enabled on these devices, you would connect Workstation to router using Crossover Ethernet cable",
+        "correct_answer":"True",
+        "incorrect_answers":["False","",""]
+          },
+      {
+        "category":"Networking",
+        "type":"boolean",
+        "difficulty":"easy",
+        "question":" You need to connect several network devices together using twisted pair Ethernet cables. Assuming Auto-MDI/MDIX is not enabled on these devices, you would connect Router to router Straight-through Ethernet cable",
+        "correct_answer":"False",
+        "incorrect_answers":["True","",""]
+        },
+      {
+        "category":"Networking",
+        "type":"boolean",
+        "difficulty":"easy",
+        "question":" ",
+        "correct_answer":"False",
+        "incorrect_answers":["True"]
+        },
+      {
+        "category":"Networking",
+        "type":"boolean",
+        "difficulty":"easy",
+        "question":" ",
+        "correct_answer":"True",
+        "incorrect_answers":["False"]
+        },
+      {
+        "category":"Networking",
+        "type":"multiple",
+        "difficulty":"easy",
+        "question":" ",
+        "correct_answer":["",""],
+        "incorrect_answers":["","",""]
+        },
+      {
+        "category":"Networking",
+        "type":"multiple",
+        "difficulty":"easy",
+        "question":" ",
+        "correct_answer":["",""],
+        "incorrect_answers":["","",""]
+        },
+    {
+      "category":"Networking",
+      "type":"multiple",
+      "difficulty":"easy",
+      "question":" ",
+      "correct_answer":["",""],
+      "incorrect_answers":["","",""]
+      },
+    {
+      "category":"Networking",
+      "type":"multiple",
+      "difficulty":"easy",
+      "question":" ",
+      "correct_answer":["",""],
+      "incorrect_answers":["","",""]
+      }
+  ]
+}
