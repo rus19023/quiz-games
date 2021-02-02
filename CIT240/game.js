@@ -155,10 +155,11 @@ choices.forEach((choice) => {
             switch (consecutiveCorrect) {
                 case 5:
                     incrementScore(CORRECT_BONUS);
-                    console.log('1st level bonus level consecutive questions answered correctly, add bonus')
+                    bonusText = '5 in a row! 1st level bonus reached!';
                     break;
                 case 10:
                     incrementScore(CORRECT_BONUS * 3);
+                    bonusText = "10 in a row! Wow!";
                     break;
                 case 15:
                     incrementScore(CORRECT_BONUS * 4);
