@@ -104,7 +104,7 @@ getNewQuestion = () => {
         //go to the end page
         return window.location.assign('end.html');
     }
-    questionCounter++;
+    ++questionCounter;
     progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
     //Update the progress bar
     progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
@@ -144,7 +144,7 @@ choices.forEach((choice) => {
             lastCorrect = true;
             // add this correct answer to consecutive total
             if (lastCorrect) {
-                consecutiveCorrect ++;
+                ++consecutiveCorrect;
                 //console.log('consecutiveCorrect: ' + consecutiveCorrect);
 
                 // add points for correct answer
@@ -152,7 +152,7 @@ choices.forEach((choice) => {
                 
                 // bonuses for consecutive correct answers!
                 switch (consecutiveCorrect) {
-                    case 3:
+                    case 5:
                         incrementScore(CORRECT_BONUS);
                         console.log('1st level bonus level consecutive questions answered correctly, add bonus')
                         break;
