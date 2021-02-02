@@ -48,21 +48,20 @@ fetch('questions.json')
             //console.log('formattedQuestion.results.type: ' + formattedQuestion.results.type);
 
             const answerChoices = [...loadedQuestion.incorrect_answers];
-            
 
             /*
             // get # of answers from questions.type, 2 if true/false, 4 if multiple.
-            questionType = question.type; 
+            questionType = question.type;
             console.log('questionType: ' + questionType);
-            //console.log('answers = ' + answers);       
-            
+            //console.log('answers = ' + answers);
+
             if (questionType === 'boolean') {
                 answers = 2;
             } else {
                 answers = 4;
             }
             */
-           
+
             formattedQuestion.answer = Math.floor(Math.random() * 2) + 1;
             answerChoices.splice(
                 formattedQuestion.answer - 1,
@@ -201,10 +200,10 @@ choices.forEach((choice) => {
                     bonusText = "Uh Oh, starting over! <br> Don't give up, try again!";
                     break;
             } // end feedback switch
-            
+
             if (consecutiveCorrect === 0) {
                 bonusText = "Uh Oh, starting over! <br> Don't give up, try again!";
-            }            
+            }
             bonus.innerHTML = bonusText;
         console.log(" questionCounter: " + questionCounter + '  consecutiveCorrect: ' + consecutiveCorrect );
         //grade = totalCorrect/questionCounter;

@@ -3,248 +3,73 @@
   "results":
   [
     {
-     "category":"Section 2.6",
-     "type":"boolean",
-     "difficulty":"easy",
-     "question":"",
-     "correct_answer":"False",
-     "incorrect_answers":["True","",""],
-     "explanation":""
-     },
+      "category":"Section 2.5",
+      "type":"multiple",
+      "difficulty":"easy",
+      "question":"Which is used to send email messages between mail servers? ",
+      "correct_answer":"SMTP",
+      "incorrect_answers":["IGMP","ARP","SNMP"],      "explanation":"The Simple Mail Transfer Protocol (SMTP) is used to route electronic mail between mail servers. The Post Office Protocol (POP3) is used by email clients to retrieve email from mail servers."
+      },
+      {
+      "category":"Section 2.5",
+      "type":"boolean",
+      "difficulty":"easy",
+      "question":"",
+      "correct_answer":"False",
+      "incorrect_answers":["True","",""],
+      "explanation":"The Internet Control Message Protocol (ICMP) works closely with IP in providing error and control information that helps move data packets through the internetwork."
+    },
     {
-     "category":"Section 2.6",
-     "type":"multiple",
-     "difficulty":"easy",
-     "question":"What role does ARP play in the routing process? ",
-     "correct_answer":"If a router does not know a destination device's MAC address, it sends an ARP broadcast containing the IP address and requesting the MAC address.",
-     "incorrect_answers":["ARP does not play any role in the routing process. Switches use ARP to map IP addresses to MAC addresses in collision domains.","If a router does not know a destination device's IP address, it sends an ARP broadcast containing the MAC address and requesting the IP address.","If a router knows the MAC and IP address of a destination host, it sends an ARP request to update the other routers' route tables."],
-     "explanation":""
-     },
+    "category":"Section 2.5",
+    "type":"boolean",
+    "difficulty":"easy",
+    "question":"ARP is used to get the MAC address of a host from its IP address.",
+    "correct_answer":"True",
+    "incorrect_answers":["False","",""],
+    "explanation":"The Address Resolution Protocol (ARP) is used to get the MAC address of a host from a known IP address. ARP is used within a subnet to get the MAC address of a device on the same subnet as the requesting device."
+    },
     {
-     "category":"Section 2.6",
-     "type":"boolean",
-     "difficulty":"easy",
-     "question":"",
-     "correct_answer":"True",
-     "incorrect_answers":["False","",""],
-     "explanation":""
-     },
+      "category":"Section 2.5",
+      "type":"multiple",
+      "difficulty":"easy",
+      "question":"Which are used to identify routes through an internetwork? ",
+      "correct_answer":"RIP and OSPF",
+      "incorrect_answers":["BOOTP and RARP","FTP and TFPT","RARP and TCP"],
+      "explanation":""
+    },
     {
-     "category":"Section 2.5",
-     "type":"boolean",
-     "difficulty":"easy",
-     "question":"These two of the following functions are performed by IP: Discovering the MAC address of a host and Identifying hosts with the IP address",
-     "correct_answer":"False",
-     "incorrect_answers":["True","",""],
-     "explanation":"IP is responsible for moving data through the network. It identifies hosts by the IP address and routes datagrams based on this IP address. The other functions listed here are performed by other protocols in the TCP/IP suite."
-     },
+      "category":"Section 2.5",
+      "type":"boolean",
+      "difficulty":"easy",
+      "question":"These two of the following functions are performed by IP: Discovering the MAC address of a host and Identifying hosts with the IP address","correct_answer":"False",
+      "incorrect_answers":["True","",""],
+      "explanation":"IP is responsible for moving data through the network. It identifies hosts by the IP address and routes datagrams based on this IP address. The other functions listed here are performed by other protocols in the TCP/IP suite."
+      },
     {
-     "category":"Section 2.5",
-     "type":"multiple",
-     "difficulty":"easy",
-     "question":"Which are used to identify routes through an internetwork? ",
-     "correct_answer":"RIP and OSPF",
-     "incorrect_answers":["BOOTP and RARP","FTP and TFPT","RARP and TCP"],
-     "explanation":""
-     },
-    {
-     "category":"Section 2.5",
-     "type":"boolean",
-     "difficulty":"easy",
-     "question":"ARP is used to get the MAC address of a host from its IP address.",
-     "correct_answer":"True",
-     "incorrect_answers":["False","",""],
-     "explanation":"The Address Resolution Protocol (ARP) is used to get the MAC address of a host from a known IP address. ARP is used within a subnet to get the MAC address of a device on the same subnet as the requesting device."
-     },    
-    {
-      "category":"Section 2.5",
-      "type":"boolean",
-      "difficulty":"easy",
-      "question":"",
-      "correct_answer":"False",
-      "incorrect_answers":["True","",""],
-      "explanation":"The Internet Control Message Protocol (ICMP) works closely with IP in providing error and control information that helps move data packets through the internetwork."
-      },
-    {
-      "category":"Section 2.5",
-      "type":"multiple",
-      "difficulty":"easy",
-      "question":"Which is used to send email messages between mail servers? ",
-      "correct_answer":"SMTP",
-      "incorrect_answers":["IGMP","ARP","SNMP"],
-      "explanation":"The Simple Mail Transfer Protocol (SMTP) is used to route electronic mail between mail servers. The Post Office Protocol (POP3) is used by email clients to retrieve email from mail servers."
-      },
-    {
-      "category":"Section 2.5",
-      "type":"boolean",
-      "difficulty":"easy",
-      "question":"DHCP is used to assign IP addresses to hosts.",
-      "correct_answer":"True",
-      "incorrect_answers":["False","",""],
-      "explanation":"The Dynamic Host Configuration Protocol (DHCP) is used for delivering IP addresses to network hosts."
-      },
-    {
-      "category":"Section 2.5",
-      "type":"boolean",
-      "difficulty":"easy",
-      "question":"An Internet server has a single network interface that has been assigned an IP address. The server is running both the FTP and HTTP services. A client computer initiates a session with the HTTP server. The HTTP request from the client routed to the correct service running on the server using Routing Information Protocol (RIP).",
-      "correct_answer":"False",
-      "incorrect_answers":["True","",""],
-      "explanation":""
-      },
-    {
-      "category":"Section 2.5",
-      "type":"multiple",
-      "difficulty":"easy",
-      "question":"An Internet server has a single network interface that has been assigned an IP address. The server is running both the FTP and HTTP services. A client computer initiates a session with the HTTP server. How is the HTTP request from the client routed to the correct service running on the server? ",
-      "correct_answer":"Port or socket number",
-      "incorrect_answers":["IP address","Session ID","Sequence number"],
-      "explanation":""
-      },
-    {
-      "category":"Section 2.5",
-      "type":"boolean",
-      "difficulty":"easy",
-      "question":"These two of the following functions are performed by IP: Identifying hosts with the IP address and Routing datagrams to hosts",
-      "correct_answer":"True",
-      "incorrect_answers":["False","",""],
-      "explanation":"IP is responsible for moving data through the network. It identifies hosts by the IP address and routes datagrams based on this IP address. The other functions listed here are performed by other protocols in the TCP/IP suite."
-      },
-    {
-      "category":"Section 2.5",
-      "type":"boolean",
-      "difficulty":"easy",
-      "question":"A client computer starts to download some files from an FTP server named FTPsvr1. While the first download is in progress, the user opens a second instance of the FTP program and initiates a second download. The server and the client use CRC to keep each download separate.",
-      "correct_answer":"False",
-      "incorrect_answers":["True","",""],
-      "explanation":"Communication instances are kept separate by session IDs. Each communication instance is identified with a session ID. Port or socket numbers are used to identify a service running on the server. For example, FTP uses ports 20 and 21 to send communications to the FTP service running on the server. Both sessions would use the same port number(s) to communicate. Sequence numbers are used in packets to make sure that packets can be reassembled in the proper order and to identify lost packets. The Cyclical Redundancy Check (CRC) is used in a packet or a frame to identify errors within the packet or the frame. The IP address identifies a network interface."
-      },
-    {
-      "category":"Section 2.5",
-      "type":"multiple",
-      "difficulty":"easy",
-      "question":"A client computer starts to download some files from an FTP server named FTPsvr1. While the first download is in progress, the user opens a second instance of the FTP program and initiates a second download. What does the server and the client use to keep each download separate?",
-      "correct_answer":"Session ID",
-      "incorrect_answers":["Port or socket numbers","Sequence numbers","IP Address"],
-      "explanation":"Communication instances are kept separate by session IDs. Each communication instance is identified with a session ID. Port or socket numbers are used to identify a service running on the server. For example, FTP uses ports 20 and 21 to send communications to the FTP service running on the server. Both sessions would use the same port number(s) to communicate. Sequence numbers are used in packets to make sure that packets can be reassembled in the proper order and to identify lost packets. The Cyclical Redundancy Check (CRC) is used in a packet or a frame to identify errors within the packet or the frame. The IP address identifies a network interface."
-      },
-    {
-      "category":"Section 2.5",
-      "type":"boolean",
-      "difficulty":"easy",
-      "question":"A client computer starts to download some files from an FTP server named FTPsvr1. While the first download is in progress, the user opens a second instance of the FTP program and initiates a second download. The server and the client use sequence numbers to keep each download separate.",
-      "correct_answer":"False",
-      "incorrect_answers":["True","",""],
-      "explanation":"Communication instances are kept separate by session IDs. Each communication instance is identified with a session ID. Port or socket numbers are used to identify a service running on the server. For example, FTP uses ports 20 and 21 to send communications to the FTP service running on the server. Both sessions would use the same port number(s) to communicate. Sequence numbers are used in packets to make sure that packets can be reassembled in the proper order and to identify lost packets. The Cyclical Redundancy Check (CRC) is used in a packet or a frame to identify errors within the packet or the frame. The IP address identifies a network interface."
-      },
-    {
-      "category":"Section 2.5",
-      "type":"boolean",
-      "difficulty":"easy",
-      "question":"The purpose of the CRC in network communications is to re-assemble packets into their original order.",
-      "correct_answer":"False",
-      "incorrect_answers":["True","",""],
-      "explanation":"The Cyclical Redundancy Check (CRC) is a mathematical calculation added to each frame. Its purpose is to detect when a frame arrives that has been corrupted. The sending device calculates the CRC and adds it to the frame. The receiving device calculates the CRC when the frame is received. If the CRCs do not match, the frame has been corrupted or altered. The most common method of correcting errors is to request retransmission of the original frame. Lost packets are detected by missing sequence numbers or missing acknowledgements. Packet sequence numbers are also used to re-assemble packets into their original order. Flow control uses special messages to speed up or slow down the rate of data transmission."
-      },
-    {
-      "category":"Networking",
-      "type":"multiple",
-      "difficulty":"easy",
-      "question":"What is the purpose of the CRC in network communications? ",
-      "correct_answer":"Detect data errors",
-      "incorrect_answers":["Request retransmission of lost packets","Detect lost packets","Correct data errors"],
-      "explanation":"The Cyclical Redundancy Check (CRC) is a mathematical calculation added to each frame. Its purpose is to detect when a frame arrives that has been corrupted. The sending device calculates the CRC and adds it to the frame. The receiving device calculates the CRC when the frame is received. If the CRCs do not match, the frame has been corrupted or altered. The most common method of correcting errors is to request retransmission of the original frame. Lost packets are detected by missing sequence numbers or missing acknowledgements. Packet sequence numbers are also used to re-assemble packets into their original order. Flow control uses special messages to speed up or slow down the rate of data transmission."
-      },
-    {
-      "category":"Section 2.5",
-      "type":"boolean",
-      "difficulty":"easy",
-      "question":"The purpose of the CRC in network communications is to request retransmission of lost packets",
-      "correct_answer":"False",
-      "incorrect_answers":["True","",""],
-      "explanation":"The Cyclical Redundancy Check (CRC) is a mathematical calculation added to each frame. Its purpose is to detect when a frame arrives that has been corrupted. The sending device calculates the CRC and adds it to the frame. The receiving device calculates the CRC when the frame is received. If the CRCs do not match, the frame has been corrupted or altered. The most common method of correcting errors is to request retransmission of the original frame. Lost packets are detected by missing sequence numbers or missing acknowledgements. Packet sequence numbers are also used to re-assemble packets into their original order. Flow control uses special messages to speed up or slow down the rate of data transmission."
-      },
-    {
-      "category":"Networking",
-      "type":"boolean",
-      "difficulty":"easy",
-      "question":"The following OSI model layer corresponds to the following functions: Physical=Logical device identification, path identification and selection.",
-      "correct_answer":"False",
-      "incorrect_answers":["True","",""],
-      "explanation":""
-      },
-    {
-      "category":"Networking",
-      "type":"multiple",
-      "difficulty":"easy",
-      "question":"Which of the following are functions of the MAC sublayer in the OSI model? ",
-      "correct_answer":"Defining a unique hardware address for each device on the network and letting devices on the network have access to the LAN.",
-      "incorrect_answers":["Letting devices on the network have access to the LAN and mapping hardware addresses to link-layer addresses.","Mapping hardware addresses to link-layer addresses and defining a unique hardware address for each device on the network.","Defining a unique hardware address for each device on the network and creating routing tables based on MAC addresses."],
-      "explanation":""
-      },
-    {
-      "category":"Networking",
-      "type":"boolean",
-      "difficulty":"easy",
-      "question":"The following OSI model layer corresponds to the following functions: Network=Logical device identification, path identification and selection.",
-      "correct_answer":"True",
-      "incorrect_answers":["False","",""],
-      "explanation":""
-      },
-    {
-      "category":"Networking",
-      "type":"boolean",
-      "difficulty":"easy",
-      "question":"The following OSI model layer corresponds to the following functions: Transport=Convert data to 0s and 1s, bit signaling and synchronization.",
-      "correct_answer":"False",
-      "incorrect_answers":["True","",""],
-      "explanation":""
-      }, 
-    {
-      "category":"Networking",
-      "type":"boolean",
-      "difficulty":"easy",
-      "question":"The following OSI model layer corresponds to the following functions: Physical=Convert data to 0s and 1s, bit signaling and synchronization.",
-      "correct_answer":"True",
-      "incorrect_answers":["False","",""],
-      "explanation":""
-      }, 
-    {
-      "category":"Networking",
-      "type":"boolean",
-      "difficulty":"easy",
-      "question":"The following OSI model layer corresponds to the following functions: Transport=Flow control, reliable data transfer, windowing, segmentation, and sequencing.",
-      "correct_answer":"True",
-      "incorrect_answers":["False","",""],
-      "explanation":""
-      }, 
-    {
-      "category":"Networking",
-      "type":"boolean",
-      "difficulty":"easy",
-      "question":"The following OSI model layer corresponds to the following functions:  Network=Logical topology, hardware addresses, media access, framing.",
-      "correct_answer":"False",
-      "incorrect_answers":["True","",""],
-      "explanation":""
-      },
-      {
-      "category":"Networking",
-      "type":"multiple",
-      "difficulty":"easy",
-      "question":"The following items describe the    functions performed at various OSI model layers: 1-Logical topology, hardware addresses, media access, framing. 2-Logical device identification, path identification and selection. 3-Flow control, reliable data transfer, windowing, segmentation, and sequencing. 4-Convert data to 0s and 1s, bit signaling and synchronization.   Which of the following correctly identifies the layers that perform each of the functions listed here? ",
-      "correct_answer":"Data Link, Network, Transport, Physical",
-      "incorrect_answers":["Network, Data Link, Transport, Physical","Transport, Network, Physical, Data Link","Physical, Transport, Network, Data Link"],
-      "explanation":"The following OSI model layers correspond to the following functions: Data Link-Logical topology, hardware addresses, media access, framing.    Network-Logical device identification, path identification and selection. Transport-Flow control, reliable data transfer, windowing, segmentation, and sequencing.  Physical-Convert data to 0s and 1s, bit signaling and synchronization."
-      },
-    {
-      "category":"Networking",
-      "type":"boolean",
-      "difficulty":"easy",
-      "question":"The following OSI model layer corresponds to the following functions: Transport=Flow control, reliable data transfer, windowing, segmentation, and sequencing.",
-      "correct_answer":"True",
-      "incorrect_answers":["False","",""],
-      "explanation":""
-      },
+    "category":"Section 2.6",
+    "type":"boolean",
+    "difficulty":"easy",
+    "question":"",
+    "correct_answer":"True",
+    "incorrect_answers":["False","",""],
+    "explanation":""
+    },
+    {"category":"Section 2.6",
+    "type":"multiple",
+    "difficulty":"easy",
+    "question":"What role does ARP play in the routing process? ",
+    "correct_answer":"If a router does not know a destination device's MAC address, it sends an ARP broadcast containing the IP address and requesting the MAC address.",
+    "incorrect_answers":["ARP does not play any role in the routing process. Switches use ARP to map IP addresses to MAC addresses in collision domains.","If a router does not know a destination device's IP address, it sends an ARP broadcast containing the MAC address and requesting the IP address.","If a router knows the MAC and IP address of a destination host, it sends an ARP request to update the other routers' route tables."],
+    "explanation":""
+    },
+    {"category":"Section 2.5",
+     "type":"boolean",
+     "difficulty":"easy",
+     "question":"",
+     "correct_answer":"False",
+     "incorrect_answers":["True","",""],
+     "explanation":""
+     },
     {
       "category":"Networking ",
       "type":"boolean",
@@ -286,8 +111,8 @@
       "type":"boolean",
       "difficulty":"easy",
       "question":"127.99.1.155 and 10.244.12.16 are private IP addresses.",
-      "correct_answer":"False",
-      "incorrect_answers":["True","",""],
+      "correct_answer":"True",
+      "incorrect_answers":["False","",""],
       "explanation":"Private addresses fall within the following range: 10.0.0.0 to 10.255.255.255, 172.16.0.0 to 172.31.255.255 and 192.168.0.0 to 192.168.255.255. Private addresses are used only within a private network, and cannot be used on the Internet. A service such as Network Address Translation (NAT) is required to translate private addresses into a public address."
       },
     {
