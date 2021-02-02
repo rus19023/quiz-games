@@ -11,9 +11,10 @@ let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
+//let answers = 0;
 
 // my added variables for bonus and grade score
-let totalCorrect = 0;
+//let totalCorrect = 0;
 let consecutiveCorrect = 0;
 let lastCorrect = false;
 
@@ -29,6 +30,8 @@ fetch('questions.json')
             //throw new Error("HTTP error " + response.status);
             console.error(err);
         }
+
+        //console.log('res.results.type: ' + res);
         return res.json();
     })
     .then((loadedQuestions) => {
@@ -36,12 +39,29 @@ fetch('questions.json')
             const formattedQuestion = {
                 question: loadedQuestion.question,
             };
-
-            console.log(loadedQuestions);
+            
+            //console.log('question-type: ' + formattedQuestion[0].type);
+            //console.log('loadedQuestions: ' + loadedQuestions);
             questions = loadedQuestions;
+            //console.log('formattedQuestion.results.type: ' + formattedQuestion.results.type);
 
             const answerChoices = [...loadedQuestion.incorrect_answers];
-            formattedQuestion.answer = Math.floor(Math.random() * 4) + 1;
+            
+
+            /*
+            // get # of answers from questions.type, 2 if true/false, 4 if multiple.
+            questionType = question.type; 
+            console.log('questionType: ' + questionType);
+            //console.log('answers = ' + answers);       
+            
+            if (questionType === 'boolean') {
+                answers = 2;
+            } else {
+                answers = 4;
+            }
+            */
+           
+            formattedQuestion.answer = Math.floor(Math.random() * 2) + 1;
             answerChoices.splice(
                 formattedQuestion.answer - 1,
                 0,
@@ -51,7 +71,7 @@ fetch('questions.json')
             answerChoices.forEach((choice, index) => {
                 formattedQuestion['choice' + (index + 1)] = choice;
             });
-
+            //console.log('formattedQuestion: ' + formattedQuestion.answer);
             return formattedQuestion;
         });
 
@@ -59,10 +79,11 @@ fetch('questions.json')
     })
     .catch((err) => {
         console.error(err);
-    });
+     });
 
 //CONSTANTS
-const CORRECT_BONUS = 10;
+const CORRECT_BONUS = 100;
+const CORRECT_POINTS = 10;
 const MAX_QUESTIONS = 10;
 
 startGame = () => {
@@ -116,26 +137,47 @@ choices.forEach((choice) => {
 
         const classToApply =
             selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
-
+        // if answer is correct
         if (classToApply === 'correct') {
-            lastCorrect = true;  
-                //incrementScore(CORRECT_BONUS);
-                //console.log('lastCorrect: ' + lastCorrect);
+            //debugger;
+            // set last answer correct to true so it can be counted for consecutive bonus
+            lastCorrect = true;
+            // add this correct answer to consecutive total
             if (lastCorrect) {
-               consecutiveCorrect ++;
-               console.log('consecutiveCorrect: ' + consecutiveCorrect);        
-               
-               // if more than 10 correct in a row, add bonus! (testing if all 3 correct, add bonus!)
-               if (consecutiveCorrect > 2) {
-                totalCorrect += 100;
+                consecutiveCorrect ++;
+                //console.log('consecutiveCorrect: ' + consecutiveCorrect);
+
+                // add points for correct answer
+                incrementScore(CORRECT_POINTS);
+                
+                // bonuses for consecutive correct answers!
+                switch (consecutiveCorrect) {
+                    case 3:
+                        incrementScore(CORRECT_BONUS);
+                        console.log('1st level bonus level consecutive questions answered correctly, add bonus')
+                        break;
+                    case 10:
+                        incrementScore(CORRECT_BONUS * 3);
+                        break;
+                    case 15:
+                        incrementScore(CORRECT_BONUS * 4);
+                        break;
+                    case 20:
+                        incrementScore(CORRECT_BONUS * 5);
+                        break;
+                    case 25:
+                        incrementScore(CORRECT_BONUS * 10);
+                        break;
+                    default:
+                        break;
+                }
+            } else {
                 consecutiveCorrect = 0;
-               } 
-            }          
-            totalCorrect ++;
+            }
         }
-        console.log("totalCorrect: " + totalCorrect + " questionCounter: " + questionCounter + '  consecutiveCorrect: ' + consecutiveCorrect );
-        grade = totalCorrect/questionCounter;
-        incrementScore(grade);
+        console.log(" questionCounter: " + questionCounter + '  consecutiveCorrect: ' + consecutiveCorrect );
+        //grade = totalCorrect/questionCounter;
+        //incrementScore(grade);
 
         selectedChoice.parentElement.classList.add(classToApply);
 
@@ -147,6 +189,6 @@ choices.forEach((choice) => {
 });
 
 incrementScore = (num) => {
-    score = (num*100).toFixed(0);
+    score += num;
     scoreText.innerText = score;
 };
