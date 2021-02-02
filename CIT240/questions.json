@@ -45,15 +45,15 @@
       "incorrect_answers":["True","",""],
       "explanation":"IP is responsible for moving data through the network. It identifies hosts by the IP address and routes datagrams based on this IP address. The other functions listed here are performed by other protocols in the TCP/IP suite."
       },
-    {
-    "category":"Section 2.6",
-    "type":"boolean",
-    "difficulty":"easy",
-    "question":"",
-    "correct_answer":"True",
-    "incorrect_answers":["False","",""],
-    "explanation":""
-    },
+      {
+        "category":"Section 2.5",
+        "type":"boolean",
+        "difficulty":"easy",
+        "question":"DHCP is used to assign IP addresses to hosts.",
+        "correct_answer":"True",
+        "incorrect_answers":["False","",""],
+        "explanation":"The Dynamic Host Configuration Protocol (DHCP) is used for delivering IP addresses to network hosts."
+      },
     {"category":"Section 2.6",
     "type":"multiple",
     "difficulty":"easy",
@@ -111,8 +111,8 @@
       "type":"boolean",
       "difficulty":"easy",
       "question":"127.99.1.155 and 10.244.12.16 are private IP addresses.",
-      "correct_answer":"True",
-      "incorrect_answers":["False","",""],
+      "correct_answer":"False",
+      "incorrect_answers":["True","",""],
       "explanation":"Private addresses fall within the following range: 10.0.0.0 to 10.255.255.255, 172.16.0.0 to 172.31.255.255 and 192.168.0.0 to 192.168.255.255. Private addresses are used only within a private network, and cannot be used on the Internet. A service such as Network Address Translation (NAT) is required to translate private addresses into a public address."
       },
     {

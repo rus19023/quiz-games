@@ -16,6 +16,7 @@
 
 img {
   width: 100%;
+  max-width: 95vw;
   padding: 2rem;
 }
 

@@ -1,15 +1,7 @@
 {
     "response_code":0,
     "results":
-    [{
-        "category":"Section 2.5",
-        "type":"boolean",
-        "difficulty":"easy",
-        "question":"DHCP is used to assign IP addresses to hosts.",
-        "correct_answer":"True",
-        "incorrect_answers":["False","",""],
-        "explanation":"The Dynamic Host Configuration Protocol (DHCP) is used for delivering IP addresses to network hosts."
-        },
+    [
       {
         "category":"Section 2.5",
         "type":"boolean",
