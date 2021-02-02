@@ -1,33 +1,88 @@
 {
   "response_code":0,
   "results":
-  [  {
-          "category":"Networking",
-          "type":"boolean",
-          "difficulty":"easy",
-          "question":"",
-          "correct_answer":"False",
-          "incorrect_answers":["True","",""],
-          "explanation":""
-          },
-        {
-          "category":"Networking",
-          "type":"multiple",
-          "difficulty":"easy",
-          "question":"The following items describe the    functions performed at various OSI model layers: 1-Logical topology, hardware addresses, media access, framing. 2-Logical device identification, path identification and selection. 3-Flow control, reliable data transfer, windowing, segmentation, and sequencing. 4-Convert data to 0s and 1s, bit signaling and synchronization.   Which of the following correctly identifies the layers that perform each of the functions listed here? ",
-          "correct_answer":"Data Link, Network, Transport, Physical",
-          "incorrect_answers":["Network, Data Link, Transport, Physical","Transport, Network, Physical, Data Link","Physical, Transport, Network, Data Link"],
-          "explanation":"The following OSI model layers correspond to the following functions: Data Link-Logical topology, hardware addresses, media access, framing.    Network-Logical device identification, path identification and selection. Transport-Flow control, reliable data transfer, windowing, segmentation, and sequencing.  Physical-Convert data to 0s and 1s, bit signaling and synchronization"
-          },
-        {
-          "category":"Networking",
-          "type":"boolean",
-          "difficulty":"easy",
-          "question":"",
-          "correct_answer":"True",
-          "incorrect_answers":["False","",""],
-          "explanation":""
-          },
+  [
+    {
+      "category":"Networking",
+      "type":"boolean",
+      "difficulty":"easy",
+      "question":"The following OSI model layer corresponds to the following functions: Physical=Logical device identification, path identification and selection.",
+      "correct_answer":"False",
+      "incorrect_answers":["True","",""],
+      "explanation":""
+      },
+    {
+      "category":"Networking",
+      "type":"multiple",
+      "difficulty":"easy",
+      "question":"Which of the following are functions of the MAC sublayer in the OSI model? ",
+      "correct_answer":"Defining a unique hardware address for each device on the network and letting devices on the network have access to the LAN.",
+      "incorrect_answers":["Letting devices on the network have access to the LAN and mapping hardware addresses to link-layer addresses.","Mapping hardware addresses to link-layer addresses and defining a unique hardware address for each device on the network.","Defining a unique hardware address for each device on the network and creating routing tables based on MAC addresses."],
+      "explanation":""
+      },
+    {
+      "category":"Networking",
+      "type":"boolean",
+      "difficulty":"easy",
+      "question":"The following OSI model layer corresponds to the following functions: Network=Logical device identification, path identification and selection.",
+      "correct_answer":"True",
+      "incorrect_answers":["False","",""],
+      "explanation":""
+      },
+    {
+      "category":"Networking",
+      "type":"boolean",
+      "difficulty":"easy",
+      "question":"The following OSI model layer corresponds to the following functions: Transport=Convert data to 0s and 1s, bit signaling and synchronization.",
+      "correct_answer":"False",
+      "incorrect_answers":["True","",""],
+      "explanation":""
+      }, 
+    {
+      "category":"Networking",
+      "type":"boolean",
+      "difficulty":"easy",
+      "question":"The following OSI model layer corresponds to the following functions: Physical=Convert data to 0s and 1s, bit signaling and synchronization.",
+      "correct_answer":"True",
+      "incorrect_answers":["False","",""],
+      "explanation":""
+      }, 
+    {
+      "category":"Networking",
+      "type":"boolean",
+      "difficulty":"easy",
+      "question":"The following OSI model layer corresponds to the following functions: Transport=Flow control, reliable data transfer, windowing, segmentation, and sequencing.",
+      "correct_answer":"True",
+      "incorrect_answers":["False","",""],
+      "explanation":""
+      }, 
+    {
+      "category":"Networking",
+      "type":"boolean",
+      "difficulty":"easy",
+      "question":"The following OSI model layer corresponds to the following functions:  Network=Logical topology, hardware addresses, media access, framing.",
+      "correct_answer":"False",
+      "incorrect_answers":["True","",""],
+      "explanation":""
+      },
+      {
+      "category":"Networking",
+      "type":"multiple",
+      "difficulty":"easy",
+      "question":"The following items describe the    functions performed at various OSI model layers: 1-Logical topology, hardware addresses, media access, framing. 2-Logical device identification, path identification and selection. 3-Flow control, reliable data transfer, windowing, segmentation, and sequencing. 4-Convert data to 0s and 1s, bit signaling and synchronization.   Which of the following correctly identifies the layers that perform each of the functions listed here? ",
+      "correct_answer":"Data Link, Network, Transport, Physical",
+      "incorrect_answers":["Network, Data Link, Transport, Physical","Transport, Network, Physical, Data Link","Physical, Transport, Network, Data Link"],
+      "explanation":"The following OSI model layers correspond to the following functions: Data Link-Logical topology, hardware addresses, media access, framing.    Network-Logical device identification, path identification and selection. Transport-Flow control, reliable data transfer, windowing, segmentation, and sequencing.  Physical-Convert data to 0s and 1s, bit signaling and synchronization."
+      },
+    {
+      "category":"Networking",
+      "type":"boolean",
+      "difficulty":"easy",
+      "question":"The following OSI model layer corresponds to the following functions: Transport=Flow control, reliable data transfer, windowing, segmentation, and sequencing.",
+      "correct_answer":"True",
+      "incorrect_answers":["False","",""],
+      "explanation":""
+      },
     {
       "category":"Networking ",
       "type":"boolean",
