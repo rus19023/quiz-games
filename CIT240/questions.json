@@ -14,10 +14,10 @@
           "category":"Networking",
           "type":"multiple",
           "difficulty":"easy",
-          "question":" ",
-          "correct_answer":"",
-          "incorrect_answers":["","",""],
-          "explanation":""
+          "question":"The following items describe the    functions performed at various OSI model layers: 1-Logical topology, hardware addresses, media access, framing. 2-Logical device identification, path identification and selection. 3-Flow control, reliable data transfer, windowing, segmentation, and sequencing. 4-Convert data to 0s and 1s, bit signaling and synchronization.   Which of the following correctly identifies the layers that perform each of the functions listed here? ",
+          "correct_answer":"Data Link, Network, Transport, Physical",
+          "incorrect_answers":["Network, Data Link, Transport, Physical","Transport, Network, Physical, Data Link","Physical, Transport, Network, Data Link"],
+          "explanation":"The following OSI model layers correspond to the following functions: Data Link-Logical topology, hardware addresses, media access, framing.    Network-Logical device identification, path identification and selection. Transport-Flow control, reliable data transfer, windowing, segmentation, and sequencing.  Physical-Convert data to 0s and 1s, bit signaling and synchronization"
           },
         {
           "category":"Networking",
@@ -69,8 +69,8 @@
       "type":"boolean",
       "difficulty":"easy",
       "question":"127.99.1.155 and 10.244.12.16 are private IP addresses.",
-      "correct_answer":"True",
-      "incorrect_answers":["False","",""],
+      "correct_answer":"False",
+      "incorrect_answers":["True","",""],
       "explanation":"Private addresses fall within the following range: 10.0.0.0 to 10.255.255.255, 172.16.0.0 to 172.31.255.255 and 192.168.0.0 to 192.168.255.255. Private addresses are used only within a private network, and cannot be used on the Internet. A service such as Network Address Translation (NAT) is required to translate private addresses into a public address."
       },
     {
