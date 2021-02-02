@@ -11,14 +11,14 @@
       "incorrect_answers":["IGMP","ARP","SNMP"],      "explanation":"The Simple Mail Transfer Protocol (SMTP) is used to route electronic mail between mail servers. The Post Office Protocol (POP3) is used by email clients to retrieve email from mail servers."
       },
       {
-      "category":"Section 2.5",
-      "type":"boolean",
-      "difficulty":"easy",
-      "question":"",
-      "correct_answer":"False",
-      "incorrect_answers":["True","",""],
-      "explanation":"The Internet Control Message Protocol (ICMP) works closely with IP in providing error and control information that helps move data packets through the internetwork."
-    },
+        "category":"Section 2.5",
+        "type":"boolean",
+        "difficulty":"easy",
+        "question":"An Internet server has a single network interface that has been assigned an IP address. The server is running both the FTP and HTTP services. A client computer initiates a session with the HTTP server. The HTTP request from the client routed to the correct service running on the server using Routing Information Protocol (RIP).",
+        "correct_answer":"False",
+        "incorrect_answers":["True","",""],
+        "explanation":""
+      },
     {
     "category":"Section 2.5",
     "type":"boolean",
@@ -62,14 +62,15 @@
     "incorrect_answers":["ARP does not play any role in the routing process. Switches use ARP to map IP addresses to MAC addresses in collision domains.","If a router does not know a destination device's IP address, it sends an ARP broadcast containing the MAC address and requesting the IP address.","If a router knows the MAC and IP address of a destination host, it sends an ARP request to update the other routers' route tables."],
     "explanation":""
     },
-    {"category":"Section 2.5",
-     "type":"boolean",
-     "difficulty":"easy",
-     "question":"",
-     "correct_answer":"False",
-     "incorrect_answers":["True","",""],
-     "explanation":""
-     },
+    {
+      "category":"Section 2.5",
+      "type":"boolean",
+      "difficulty":"easy",
+      "question":"A client computer starts to download some files from an FTP server named FTPsvr1. While the first download is in progress, the user opens a second instance of the FTP program and initiates a second download. The server and the client use CRC to keep each download separate.",
+      "correct_answer":"False",
+      "incorrect_answers":["True","",""],
+      "explanation":"Communication instances are kept separate by session IDs. Each communication instance is identified with a session ID. Port or socket numbers are used to identify a service running on the server. For example, FTP uses ports 20 and 21 to send communications to the FTP service running on the server. Both sessions would use the same port number(s) to communicate. Sequence numbers are used in packets to make sure that packets can be reassembled in the proper order and to identify lost packets. The Cyclical Redundancy Check (CRC) is used in a packet or a frame to identify errors within the packet or the frame. The IP address identifies a network interface."
+    },
     {
       "category":"Networking ",
       "type":"boolean",
