@@ -3,105 +3,6 @@
   "results":
   [
     {
-    "category":"Section 2.4",
-    "type":"boolean",
-    "difficulty":"easy",
-    "question":"Section 2.4, Q#1: The following OSI model layer corresponds to the following functions: Physical=Logical device identification, path identification and selection.",
-    "correct_answer":"False",
-    "incorrect_answers":["True","",""],
-    "explanation":""
-    },
-  {
-    "category":"Networking",
-    "type":"multiple",
-    "difficulty":"easy",
-    "question":"Which of the following are functions of the MAC sublayer in the OSI model? ",
-    "correct_answer":"Defining a unique hardware address for each device on the network and letting devices on the network have access to the LAN.",
-    "incorrect_answers":["Letting devices on the network have access to the LAN and mapping hardware addresses to link-layer addresses.","Mapping hardware addresses to link-layer addresses and defining a unique hardware address for each device on the network.","Defining a unique hardware address for each device on the network and creating routing tables based on MAC addresses."],
-    "explanation":""
-    },
-  {
-    "category":"Networking",
-    "type":"boolean",
-    "difficulty":"easy",
-    "question":"The following OSI model layer corresponds to the following functions: Network=Logical device identification, path identification and selection.",
-    "correct_answer":"True",
-    "incorrect_answers":["False","",""],
-    "explanation":""
-    },
-  {
-    "category":"Networking",
-    "type":"boolean",
-    "difficulty":"easy",
-    "question":"The following OSI model layer corresponds to the following functions: Transport=Convert data to 0s and 1s, bit signaling and synchronization.",
-    "correct_answer":"False",
-    "incorrect_answers":["True","",""],
-    "explanation":""
-    }, 
-  {
-    "category":"Networking",
-    "type":"boolean",
-    "difficulty":"easy",
-    "question":"The following OSI model layer corresponds to the following functions: Physical=Convert data to 0s and 1s, bit signaling and synchronization.",
-    "correct_answer":"True",
-    "incorrect_answers":["False","",""],
-    "explanation":""
-    }, 
-  {
-    "category":"Networking",
-    "type":"boolean",
-    "difficulty":"easy",
-    "question":"The following OSI model layer corresponds to the following functions: Transport=Flow control, reliable data transfer, windowing, segmentation, and sequencing.",
-    "correct_answer":"True",
-    "incorrect_answers":["False","",""],
-    "explanation":""
-    }, 
-{
-    "category":"Networking",
-    "type":"boolean",
-    "difficulty":"easy",
-    "question":"The following OSI model layer corresponds to the following functions: Network=Logical topology, hardware addresses, media access, framing.",
-    "correct_answer":"False",
-    "incorrect_answers":["True","",""],
-    "explanation":""
-    },
-  {
-    "category":"Networking",
-    "type":"multiple",
-    "difficulty":"easy",
-    "question":"The following items describe the functions performed at various OSI model layers: 1-Logical topology, hardware addresses, media access, framing. 2-Logical device identification, path identification and selection. 3-Flow control, reliable data transfer, windowing, segmentation, and sequencing. 4-Convert data to 0s and 1s, bit signaling and synchronization. Which of the following correctly identifies the layers that perform each of the functions listed here? ",
-    "correct_answer":"Data Link, Network, Transport, Physical",
-    "incorrect_answers":["Network, Data Link, Transport, Physical","Transport, Network, Physical, Data Link","Physical, Transport, Network, Data Link"],
-    "explanation":"The following OSI model layers correspond to the following functions: Data Link-Logical topology, hardware addresses, media access, framing. Network-Logical device identification, path identification and selection. Transport-Flow control, reliable data transfer, windowing, segmentation, and sequencing. Physical-Convert data to 0s and 1s, bit signaling and synchronization."
-  },
-  {
-    "category":"Networking",
-    "type":"boolean",
-    "difficulty":"easy",
-    "question":"The following OSI model layer corresponds to the following functions: Transport=Flow control, reliable data transfer, windowing, segmentation, and sequencing.",
-    "correct_answer":"True",
-    "incorrect_answers":["False","",""],
-    "explanation":""
-    },
-    {
-    "category":"Networking",
-    "type":"multiple",
-    "difficulty":"easy",
-    "question":"What is the purpose of the CRC in network communications? ",
-    "correct_answer":"Detect data errors",
-    "incorrect_answers":["Request retransmission of lost packets","Detect lost packets","Correct data errors"],
-    "explanation":"The Cyclical Redundancy Check (CRC) is a mathematical calculation added to each frame. Its purpose is to detect when a frame arrives that has been corrupted. The sending device calculates the CRC and adds it to the frame. The receiving device calculates the CRC when the frame is received. If the CRCs do not match, the frame has been corrupted or altered. The most common method of correcting errors is to request retransmission of the original frame. Lost packets are detected by missing sequence numbers or missing acknowledgements. Packet sequence numbers are also used to re-assemble packets into their original order. Flow control uses special messages to speed up or slow down the rate of data transmission."
-    },
-  {
-    "category":"Section 2.5",
-    "type":"boolean",
-    "difficulty":"easy",
-    "question":"The purpose of the CRC in network communications is to request retransmission of lost packets",
-    "correct_answer":"False",
-    "incorrect_answers":["True","",""],
-    "explanation":"The Cyclical Redundancy Check (CRC) is a mathematical calculation added to each frame. Its purpose is to detect when a frame arrives that has been corrupted. The sending device calculates the CRC and adds it to the frame. The receiving device calculates the CRC when the frame is received. If the CRCs do not match, the frame has been corrupted or altered. The most common method of correcting errors is to request retransmission of the original frame. Lost packets are detected by missing sequence numbers or missing acknowledgements. Packet sequence numbers are also used to re-assemble packets into their original order. Flow control uses special messages to speed up or slow down the rate of data transmission."
-    },
-    {
       "category":"Section 2.5",
       "type":"boolean",
       "difficulty":"easy",
@@ -145,6 +46,15 @@
     "incorrect_answers":["IP address","Session ID","Sequence number"],
     "explanation":""
   },
+    {
+      "category":"Section 2.4",
+      "type":"multiple",
+      "difficulty":"easy",
+      "question":" ",
+      "correct_answer":"",
+      "incorrect_answers":["","",""],
+      "explanation":""
+    },
     {
       "category":"Section 2.4",
       "type":"multiple",

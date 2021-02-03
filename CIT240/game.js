@@ -13,6 +13,7 @@ let questionCounter = 0;
 let availableQuestions = [];
 let bonus = document.getElementById('bonus-text');
 let bonusText = "";
+let bonusesReached = 1;
 //let answers = 0;
 
 // my added variables for bonus and grade score
@@ -114,20 +115,21 @@ getNewQuestion = () => {
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     question.innerHTML = currentQuestion.question;
-
     choices.forEach((choice) => {
         const number = choice.dataset['number'];
         choice.innerHTML = currentQuestion['choice' + number];
     });
-
     availableQuestions.splice(questionIndex, 1);
     acceptingAnswers = true;
 };
 
-// TODO:  allow and check for number of correct answers to be selected
-// TODO:  push selected plural answers to array, then check against correct answer array?
-// TODO:  
+/* TODO:
+1) allow and check for number of correct answers to be selected:  push selected plural answers to array, then check against correct answer array?
+2)
+3)
+4)
 
+*/
 
 choices.forEach((choice) => {
     choice.addEventListener('click', (e) => {
@@ -154,31 +156,38 @@ choices.forEach((choice) => {
             // calculate and add bonus points
             switch (consecutiveCorrect) {
                 case 5:
-                    incrementScore(CORRECT_BONUS * 2);
-                    bonusText = '5 in a row! 1st level bonus reached!';
+                    incrementScore(CORRECT_BONUS * 2 * bonusesReached);
+                    //bonusText = '5 in a row! 1st level bonus reached!';
+                    bonusesReached++;
                     break;
                 case 10:
                     incrementScore(CORRECT_BONUS * 4);
                     bonusText = "10 in a row! Wow!";
+                    bonusesReached++;
                     break;
                 case 15:
                     incrementScore(CORRECT_BONUS * 5);
+                    bonusesReached++;
                     break;
                 case 20:
                     incrementScore(CORRECT_BONUS * 7);
+                    bonusesReached++;
                     break;
                 case 25:
                     incrementScore(CORRECT_BONUS * 9);
+                    bonusesReached++;
                     break;
                 case 30:
                     incrementScore(CORRECT_BONUS * 10);
+                    bonusesReached++;
                     break;
                 default:
                     break;
                 }  // end bonus added to score
                 if (consecutiveCorrect === MAX_QUESTIONS) {
                     bonusText = "PERFECT SCORE!!! BONUS: " + CORRECT_BONUS * 20;
-                    incrementScore(CORRECT_BONUS * 20);
+                    bonusesReached++;
+                    incrementScore(CORRECT_BONUS * 20 * bonusesReached);
                 }
             } else {
                 lastCorrect = false;
@@ -222,7 +231,7 @@ choices.forEach((choice) => {
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply);
             getNewQuestion();
-        }, 100);
+        }, 750);
     });
 });
 
