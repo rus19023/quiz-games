@@ -3,6 +3,87 @@
   "results":
   [
     {
+      "category":"Section 2.4",
+      "type":"multiple",
+      "difficulty":"easy",
+      "question":" ",
+      "correct_answer":"",
+      "incorrect_answers":["","",""],
+      "explanation":""
+    },
+    {
+      "category":"Section 2.4",
+      "type":"multiple",
+      "difficulty":"easy",
+      "question":"Section 2.4, Q#1: The following names are given to data at various stages in the encapsulation process. 1-Packets, 2-Bits, 3-Segments, 4-Frames. To which layer of the OSI model do the names correspond?",
+      "correct_answer":"Network, Physical, Transport, Data Link",
+      "incorrect_answers":["Physical, Data Link, Network, Transport","Transport, Physical, Data Link, Network","Data Link, Transport, Physical, Network"],
+      "explanation":"As data travels through the OSI model layers, it is broken into segments at the Transport layer. Logical addresses are added at the Network layer, making each segment a packet. The Data Link layer frames each packet with the physical device address (MAC address). Frames are converted to bits at the Physical layer."
+    },
+    {
+      "category":"Section 2.4",
+      "type":"boolean",
+      "difficulty":"easy",
+      "question":"Section 2.4, Q#2. The layer of the TCP/IP model on the left corresponds to the networking component on the right: Internet Layer/Host IP addresses",
+      "correct_answer":"True",
+      "incorrect_answers":["False","",""],
+      "explanation":"The Internet layer converts the segments into packets, adding logical network and device IP addresses."
+    },
+    {
+      "category":"Section 2.4",
+      "type":"boolean",
+      "difficulty":"easy",
+      "question":"Section 2.4, Q#2. The layer of the TCP/IP model on the left corresponds to the networking component on the right: Internet Layer/Sequencing information",
+      "correct_answer":"False",
+      "incorrect_answers":["True","",""],
+      "explanation":"The Transport layer breaks the data into pieces called segments, adding sequencing and control information (such as delivery acknowledgments)."
+    },
+    {
+      "category":"Section 2.4",
+      "type":"boolean",
+      "difficulty":"easy",
+      "question":"Section 2.4, Q#2. The layer of the TCP/IP model on the left corresponds to the networking component on the right: Link Layer/MAC addresses",
+      "correct_answer":"True",
+      "incorrect_answers":["False","",""],
+      "explanation":"The Link layer converts the packets into frames, adding physical device addressing information in the form of MAC addresses. It also converts the frames into bits for transmission across the transmission media."
+    },
+    {
+      "category":"Section 2.4",
+      "type":"boolean",
+      "difficulty":"easy",
+      "question":"Section 2.4, Q#2: The layer of the TCP/IP model on the left corresponds to the networking component on the right. Transport Layer/Acknowledgments",
+      "correct_answer":"True",
+      "incorrect_answers":["False","",""],
+      "explanation":"The Transport layer breaks the data into pieces called segments, adding sequencing and control information (such as delivery acknowledgments)."
+    },
+    {
+      "category":"Section 2.4",
+      "type":"boolean",
+      "difficulty":"easy",
+      "question":"Section 2.4, Q#2: The layer of the TCP/IP model on the left corresponds to the networking component on the right. Transport Layer/Network addresses",
+      "correct_answer":"False",
+      "incorrect_answers":["True","",""],
+      "explanation":"The Internet layer converts the segments into packets, adding logical network and device IP addresses."
+    },
+    {
+      "category":"Section 2.4",
+      "type":"multiple",
+      "difficulty":"easy",
+      "question":"Section 2.4, Q#3: ",
+      "correct_answer":"",
+      "incorrect_answers":["","",""],
+      "explanation":""
+    },
+    {
+      "category":"Section 2.4",
+      "type":"multiple",
+      "difficulty":"easy",
+      "question":"Section 2.4, Q#4: Which is the appropriate layer of the OSI model on the left that corresponds with the correct information type on the right? ",
+      "correct_answer":"Network:packets, Data Link:frames, Physical:bits, Transport:segments, Application:data",
+      "incorrect_answers":["Network: data, Data Link: bits, Physical: segments, Transport: frames, Application: packets","Network: segments, Data Link: frames, Physical: packets, Transport: bits, Application: data","Network: segments, Data Link: bits, Physical: packets, Transport: frames, Application: data"],
+      "explanation":"Encapsulation is the process of breaking a message into packets, adding control and other information, and transmitting the message through the transmission media. You need to know the following four-step data encapsulation process on the sending system using the OSI model: The Application layer prepares the data to be sent through the network. The Transport layer breaks the data into pieces called segments, adding sequencing and control information. The Network layer converts the segments into packets, adding logical network and device addresses. The Data Link layer converts the packets into frames, adding physical device addressing information. The Physical layer converts the frames into bits for transmission across the transmission media."
+    },
+    {
       "category":"Section 2.5",
       "type":"multiple",
       "difficulty":"easy",
@@ -66,7 +147,7 @@
       "category":"Section 2.5",
       "type":"boolean",
       "difficulty":"easy",
-      "question":"A client computer starts to download some files from an FTP server named FTPsvr1. While the first download is in progress, the user opens a second instance of the FTP program and initiates a second download. The server and the client use CRC to keep each download separate.",
+      "question":"Section 2.5 Q# : A client computer starts to download some files from an FTP server named FTPsvr1. While the first download is in progress, the user opens a second instance of the FTP program and initiates a second download. The server and the client use CRC to keep each download separate.",
       "correct_answer":"False",
       "incorrect_answers":["True","",""],
       "explanation":"Communication instances are kept separate by session IDs. Each communication instance is identified with a session ID. Port or socket numbers are used to identify a service running on the server. For example, FTP uses ports 20 and 21 to send communications to the FTP service running on the server. Both sessions would use the same port number(s) to communicate. Sequence numbers are used in packets to make sure that packets can be reassembled in the proper order and to identify lost packets. The Cyclical Redundancy Check (CRC) is used in a packet or a frame to identify errors within the packet or the frame. The IP address identifies a network interface."
@@ -81,31 +162,31 @@
       "explanation":"169.254.0.1 - 169.254.255.254 is the range of IP addresses assigned to Windows DHCP clients if a DHCP server does not assign the client an IP address. This range is known as the Automatic Private IP Addressing (APIPA) range. The other three ranges listed in this question are defined as the private IP addresses from RFC 1918 which are commonly used behind a NAT server."
       },
     {
-      "category":"Networking",
+      "category":"Section 3.1",
       "type":"multiple",
       "difficulty":"easy",
-      "question":"Given that an IPv4 address is a 32-bit binary number represented in four octets (four 8-bit values), which of the following are valid IP addresses? ",
+      "question":"Section 3.1, Q#1: Given that an IPv4 address is a 32-bit binary number represented in four octets (four 8-bit values), which of the following are valid IP addresses? ",
       "correct_answer":"137.65.1.1",
       "incorrect_answers":["137.65.1.257","256.1.1.1","10.256.1.1"],
-      "explanation":""
+      "explanation":"An IPv4 address is a 32-bit binary number represented as four octets (four 8-bit values). Each octet is separated by a period. Because each octet is 8 bits long, the smallest possible decimal value for a single octet is 0 while the largest possible decimal value is 255."
       },
     {
-      "category":"Networking",
+      "category":"Section 3.1",
       "type":"boolean",
       "difficulty":"easy",
-      "question":"The correct binary form of the decimal IP address 192.168.1.1 is 11000000.10101000.00000001.00000001",
+      "question":"Section 3.1, Q#4: The correct binary form of the decimal IP address 192.168.1.1 is 11000000.10101000.00000001.00000001",
       "correct_answer":"True",
       "incorrect_answers":["False","",""],
-      "explanation":""
+      "explanation":"The decimal equivalent of the 11000000.10101000.00000001.00000001 IP address is 192.168.1.1. To convert from binary to decimal, use the decimal equivalent of the following binary numbers: 10000000: 128, 01000000: 64, 00100000: 32, 00010000: 16, 00001000: 8, 00000100: 4, 00000010: 2, 00000001: 1. For each bit position with a 1 value in the binary form of the address, add the decimal values for that bit. For example, the decimal equivalent of 11000000 is: 128 + 64 + 0 + 0 + 0 + 0 + 0 + 0 = 192. The decimal equivalent of 10101100.00010001.00000001.00000001 is 172.17.1.1. The decimal equivalent of 00001010.10101000.00000001.00000001 is 10.168.1.1. The decimal equivalent of 11000000.10101000.00000010.00000001 is 192.168.2.1."
       },
     {
-      "category":"Networking",
+      "category":"Section 3.1",
       "type":"multiple",
       "difficulty":"easy",
-      "question":"A workstation has been assigned the following IP addressing information: IP address: 192.168.1.26, Subnet mask: 255.255.255.0, Default gateway: 192.168.1.254, DNS server: 192.168.1. Given this information, what is the IP address of the network where this host resides? ",
+      "question":"Sect 3.1 Q#2: A workstation has been assigned the following IP addressing information: IP address: 192.168.1.26, Subnet mask: 255.255.255.0, Default gateway: 192.168.1.254, DNS server: 192.168.1. Given this information, what is the IP address of the network where this host resides? ",
       "correct_answer":"192.168.1.0",
       "incorrect_answers":["192.168.0.0","192.0.0.0","192.168.1.255"],
-      "explanation":""
+      "explanation":"The IP address includes both the network and the host address. The subnet mask is a 32-bit number associated with each IP address that identifies the network portion of the address. In binary form, the subnet mask is always a series of 1s followed by a series of 0s (1s and 0s are never mixed in sequence in the mask). In this example, the decimal form of the subnet mask is 255.255.255.0. This specifies that the network address in this example is 192.168.1.0.  192.168.1.255 is the broadcast address for this network. A network address of 192.168.0.0 would require a subnet mask of 255.255.0.0. A network address of 192.0.0.0 would require a subnet mask of 255.0.0.0."
       },
     {
       "category":"Networking",
@@ -117,13 +198,13 @@
       "explanation":"Private addresses fall within the following range: 10.0.0.0 to 10.255.255.255, 172.16.0.0 to 172.31.255.255 and 192.168.0.0 to 192.168.255.255. Private addresses are used only within a private network, and cannot be used on the Internet. A service such as Network Address Translation (NAT) is required to translate private addresses into a public address."
       },
     {
-      "category":"Networking",
+      "category":"Section 3.1",
       "type":"multiple",
       "difficulty":"easy",
-      "question":"What is the correct decimal form of this binary IP address: 00001010.00000000.01100100.00011101 ",
+      "question":"Section 3.1, Q#3: What is the correct decimal form of this binary IP address: 00001010.00000000.01100100.00011101 ",
       "correct_answer":"10.0.100.29",
       "incorrect_answers":["137.0.65.11","192.0.1.26","10.0.65.29"],
-      "explanation":""
+      "explanation":"The decimal equivalent of the 00001010.00000000.01100100.00011101 IP address is 10.0.100.29. To convert from binary to decimal, use the decimal equivalent of the following binary numbers: 10000000: 128, 01000000: 64, 00100000: 32, 00010000: 16, 00001000: 8, 00000100: 4, 00000010: 2, 00000001: 1. For each bit position with a 1 value in the binary form of the address, add the decimal values for that bit. For example, the decimal equivalent of 00001010 is: 0+ 0 + 0 + 0 + 8 + 0 + 2 + 0 = 10"
       },
     {
       "category":"Networking",

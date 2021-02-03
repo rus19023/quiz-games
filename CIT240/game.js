@@ -40,9 +40,10 @@ fetch('questions.json')
         questions = loadedQuestions.results.map((loadedQuestion) => {
             const formattedQuestion = {
                 question: loadedQuestion.question,
+                category: loadedQuestion.category,
             };
-            
-            //console.log('question-type: ' + formattedQuestion[0].type);
+
+            //console.log('question category: ' + formattedQuestion[0].category);
             //console.log('loadedQuestions: ' + loadedQuestions);
             questions = loadedQuestions;
             //console.log('formattedQuestion.results.type: ' + formattedQuestion.results.type);

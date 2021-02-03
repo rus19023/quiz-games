@@ -27,6 +27,13 @@
   color: white;
 }
 
+.img-title {
+  color: gold;
+  font-size: 2em;
+  font-weight: bold;
+  padding: 1rem;
+ }
+
 .choice-text {
   padding: 1.5rem;
   width: 100%;
