@@ -69,7 +69,7 @@
       "category":"Section 2.4",
       "type":"multiple",
       "difficulty":"easy",
-      "question":"Section 2.4, Q#3: ",
+      "question":"Section 2.4, Q#4: ",
       "correct_answer":"",
       "incorrect_answers":["","",""],
       "explanation":""
@@ -78,7 +78,7 @@
       "category":"Section 2.4",
       "type":"multiple",
       "difficulty":"easy",
-      "question":"Section 2.4, Q#4: Which is the appropriate layer of the OSI model on the left that corresponds with the correct information type on the right? ",
+      "question":"Section 2.4, Q#3: Which is the appropriate layer of the OSI model on the left that corresponds with the correct information type on the right? ",
       "correct_answer":"Network:packets, Data Link:frames, Physical:bits, Transport:segments, Application:data",
       "incorrect_answers":["Network: data, Data Link: bits, Physical: segments, Transport: frames, Application: packets","Network: segments, Data Link: frames, Physical: packets, Transport: bits, Application: data","Network: segments, Data Link: bits, Physical: packets, Transport: frames, Application: data"],
       "explanation":"Encapsulation is the process of breaking a message into packets, adding control and other information, and transmitting the message through the transmission media. You need to know the following four-step data encapsulation process on the sending system using the OSI model: The Application layer prepares the data to be sent through the network. The Transport layer breaks the data into pieces called segments, adding sequencing and control information. The Network layer converts the segments into packets, adding logical network and device addresses. The Data Link layer converts the packets into frames, adding physical device addressing information. The Physical layer converts the frames into bits for transmission across the transmission media."

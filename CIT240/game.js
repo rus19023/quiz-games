@@ -102,11 +102,11 @@ getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score);
         //console.log("mostRecentScore: " + score);
-        
+
         //go to the end page
         return window.location.assign('end.html');
     }
-    ++questionCounter;
+    questionCounter++;
     progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
     //Update the progress bar
     progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
@@ -147,39 +147,46 @@ choices.forEach((choice) => {
             lastCorrect = true;
             // add this correct answer to consecutive total
             ++consecutiveCorrect;
-                       
+
             // add points for correct answer
-            incrementScore(CORRECT_POINTS);               
-            
+            incrementScore(CORRECT_POINTS);
+
             // calculate and add bonus points
             switch (consecutiveCorrect) {
                 case 5:
-                    incrementScore(CORRECT_BONUS);
+                    incrementScore(CORRECT_BONUS * 2);
                     bonusText = '5 in a row! 1st level bonus reached!';
                     break;
                 case 10:
-                    incrementScore(CORRECT_BONUS * 3);
+                    incrementScore(CORRECT_BONUS * 4);
                     bonusText = "10 in a row! Wow!";
                     break;
                 case 15:
-                    incrementScore(CORRECT_BONUS * 4);
-                    break;
-                case 20:
                     incrementScore(CORRECT_BONUS * 5);
                     break;
+                case 20:
+                    incrementScore(CORRECT_BONUS * 7);
+                    break;
                 case 25:
+                    incrementScore(CORRECT_BONUS * 9);
+                    break;
+                case 30:
                     incrementScore(CORRECT_BONUS * 10);
                     break;
                 default:
                     break;
                 }  // end bonus added to score
+                if (consecutiveCorrect === MAX_QUESTIONS) {
+                    bonusText = "PERFECT SCORE!!! BONUS: " + CORRECT_BONUS * 20;
+                    incrementScore(CORRECT_BONUS * 20);
+                }
             } else {
                 lastCorrect = false;
-                consecutiveCorrect = 0;                       
+                consecutiveCorrect = 0;
             }  // end answer is correct
 
-            // start feedback selection 
-            
+            // start feedback selection
+
             // show bonus text to give feedback
             switch (consecutiveCorrect > 0 &&consecutiveCorrect%5) {
                 case 0:
