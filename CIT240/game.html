@@ -9,48 +9,80 @@
     <link rel="stylesheet" href="game.css" />
   </head>
   <body>
-    <div class="container">
-      <div id="loader"></div>
-      <div id="game" class="justify-center flex-column hidden">
-       <h2 style="text-align: center; font-size: 2rem;">Currently updating with WK 07 questions.</h2>
-        <div id="hud">
-          <div id="hud-item">
-            <p id="progressText" class="hud-prefix">
-              Currently updating with WK 07 questions.<br>Question
-            </p>
-            <div id="progressBar">
-              <div id="progressBarFull"></div>
-            </div>
-          </div>
-          
-          <div id="hud-item">
-            <p class="hud-prefix">
-              Score
-            </p>
-            <h1 class="hud-main-text" id="score">
-              0
-            </h1>
-          </div>
-        </div>
-        <h2 id="question">What is the answer to this question?</h2>
-        <div class="choice-container">
-          <p class="choice-prefix">A</p>
-          <p class="choice-text" data-number="1"></p>
-        </div>
-        <div class="choice-container">
-          <p class="choice-prefix">B</p>
-          <p class="choice-text" data-number="2"></p>
-        </div>
-        <div class="choice-container">
-          <p class="choice-prefix">C</p>
-          <p class="choice-text" data-number="3"></p>
-        </div>
-        <div class="choice-container">
-          <p class="choice-prefix">D</p>
-          <p class="choice-text" data-number="4"></p>
+    <header>
+      <div class=""><h3 class="center highlight">Questions current up to WK 08</h3>
+        <div class="select-game">
+          <form action="POST" action="game.html">
+            <select name="chooseGame" id="chooseGame" class="btn">
+              <option value="exam2.json" selected="selected" >Select game</option>
+              <option value="quiz1.json">Quiz 1</option>
+              <option value="quiz2.json">Quiz 2</option>
+              <option value="quiz3.json">Quiz 3</option>
+              <option value="quiz4.json">Quiz 4</option>
+              <option value="quiz5.json">Quiz 5</option>
+              <option value="quiz6.json">Quiz 6</option>
+              <option value="quiz7.json">Quiz 7</option>
+              <option value="quiz8.json">Quiz 8</option>
+              <option value="exam1.json">Exam 1</option>
+              <option value="exam2.json">Exam 2</option>
+              <option value="exam3.json">Exam 3</option>
+              <option value="exam4.json">Exam 4</option>
+              <option value="examfinal.json">Exam-Final</option>
+              <option value="https://opentdb.com/api.php?amount=30&category=9&difficulty=easy">TRIVIA-EASY</option>
+              <option value="https://opentdb.com/api.php?amount=30&category=9&difficulty=medium">TRIVIA-MEDIUM</option>
+              <option value="https://opentdb.com/api.php?amount=30&category=9&difficulty=hard">TRIVIA-HARD</option>
+            </select>
+          </form>
         </div>
       </div>
+    </header>
+    <div id="hud hidden" class="hud">
+      <div class="hud-item">
+        <p id="progressText" class="hud-prefix">              
+        </p>
+        <div id="progressBar">
+          <div id="progressBarFull"></div>
+        </div>
+      </div>
+      <div id="bonus-text" ></div>
+      <div class="hud-item2">
+        <p class="hud-prefix">
+          Score
+        </p>
+        <h1 class="hud-main-text" id="score">
+          0
+        </h1>
+      </div>
     </div>
+    <main class="hud col">
+      <div class="">
+        <div id="loader"></div>
+        <div id="game" class="justify-center hidden">
+          <div id="question" class="question">What is the answer to this question?</div>
+          <div class="">
+            <div></div>
+            <button id="next-button" type="button" class="btn hidden" onclick="getNewQuestion()">Next Question</button>
+          </div>
+          <div class="choice-container">
+            <p class="choice-prefix">A</p>
+            <p class="choice-text" data-number="1"></p>
+          </div>
+          <div class="choice-container">
+            <p class="choice-prefix">B</p>
+            <p class="choice-text" data-number="2"></p>
+          </div>
+          <div class="choice-container">
+            <p class="choice-prefix">C</p>
+            <p class="choice-text" data-number="3"></p>
+          </div>
+          <div class="choice-container">
+            <p class="choice-prefix">D</p>
+            <p class="choice-text" data-number="4"></p>
+          </div>
+          <div id="explanation"></div>
+        </div>
+      </div>
+    </main>
     <script src="game.js"></script>
   </body>
 </html>
