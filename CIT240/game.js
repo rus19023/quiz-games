@@ -31,7 +31,6 @@ const MAX_QUESTIONS = 40;
 
 startGame = () => {
     selectGame();
-    console.log('line 39, jsonFile:  ' + jsonFile);
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questions];
@@ -43,10 +42,6 @@ startGame = () => {
 //debugger;
 
 let questions = [];
-//debugger;
-console.log('line 51, jsonFile:  ' + jsonFile);
-
-
 
 selectGame = () => {
     //debugger;
