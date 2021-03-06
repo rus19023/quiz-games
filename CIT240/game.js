@@ -9,7 +9,7 @@ const loader = document.getElementById('loader');
 const hud = document.getElementById('hud');
 const game = document.getElementById('game');
 const nextButton = document.getElementById('next-button');
-
+var jsonFile = document.getElementById('chooseGame').value;
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
