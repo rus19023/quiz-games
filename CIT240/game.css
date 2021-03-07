@@ -48,7 +48,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .highlight { color: #ffd700; }
@@ -56,7 +56,7 @@ h2 {
 .choice-container {
   display: flex;
   margin-bottom: .5rem;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   border: 0.1rem solid #ffffff;
   background: #6c7f94;
 }
@@ -82,7 +82,7 @@ main {
 }
 
 ul li, ol li {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-left: 1rem;
   line-height: 1.95rem;
   list-style: none;
@@ -113,7 +113,7 @@ ul li, ol li {
 }
 
 .select-game form select {
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   font-weight: bold;
   padding: .5rem;
   height: 3.5rem;
@@ -125,7 +125,7 @@ ul li, ol li {
 }
 
 .select-game form select option {
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   color: #ffffff;
   background: #6c7f94;
 }
@@ -150,7 +150,7 @@ ul li, ol li {
 }
 
 #explanation, #explanation ul li, #explanation ol li {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   color: yellow;
   list-style: circle;
   padding: 2rem;
