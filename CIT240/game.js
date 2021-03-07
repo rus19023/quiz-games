@@ -23,7 +23,7 @@ let numAnswers = 0;
 //let totalCorrect = 0;
 let consecutiveCorrect = 0;
 let lastCorrect = false;
-let jsonFile = document.getElementById('chooseGame').value;
+//let jsonFile = document.getElementById('chooseGame').value;
 //CONSTANTS
 const CORRECT_BONUS = 100;
 const CORRECT_POINTS = 10;
@@ -196,7 +196,7 @@ choices.forEach((choice) => {
                 switch (consecutiveCorrect > 0 && consecutiveCorrect % 4) {
                     case 0:
                         bonusText = "You did it!!!  You got the bonus!";
-                        //incrementScore(CORRECT_BONUS * 4);                    
+A                        //incrementScore(CORRECT_BONUS * 4);                    
                         incrementScore(CORRECT_BONUS * 5 * bonusesReached);
                         bonusesReached++;
                         break;
