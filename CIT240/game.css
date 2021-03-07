@@ -171,6 +171,8 @@ ul li, ol li {
 
 .hud-main-text {
   text-align: center;
+  font-size: 1rem;
+  margin: .5rem;
 }
 
 #progressBar {
