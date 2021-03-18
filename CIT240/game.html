@@ -10,11 +10,12 @@
   </head>
   <body>
     <header>
-      <div class="col2"><h3 class="center highlight">Questions current up to WK 08</h3>
+      <div class="col2">
+        <h3 class="center highlight">Questions for Exam 3 only</h3>
         <div class="select-game">
           <form action="POST" action="game.html">
             <select name="chooseGame" id="chooseGame" class="btn">
-              <option value="quiz5.json" selected="selected" >Select game</option>
+              <option value="exam3.json" selected="selected" >Select game</option>
               <option value="quiz1.json">Quiz 1</option>
               <option value="quiz2.json">Quiz 2</option>
               <option value="quiz3.json">Quiz 3</option>
@@ -55,34 +56,147 @@
       </div>
     </div>
     <main class="hud col">
-      <div class="col">
+      <div class="">
         <div id="loader"></div>
         <div id="game" class="justify-center hidden">
           <div id="question" class="question">What is the answer to this question?</div>
-          <div class="">
+          <div class="col3">
+            <button id="easymode" class='btn' onclick="setEasyMode()">Hint (no score)</button>
             <div></div>
             <button id="next-button" type="button" class="btn hidden" onclick="getNewQuestion()">Next Question</button>
           </div>
-          <div class="choice-container">
-            <p class="choice-prefix">A</p>
-            <p class="choice-text" data-number="1"></p>
-          </div>
-          <div class="choice-container">
-            <p class="choice-prefix">B</p>
-            <p class="choice-text" data-number="2"></p>
-          </div>
-          <div class="choice-container">
-            <p class="choice-prefix">C</p>
-            <p class="choice-text" data-number="3"></p>
-          </div>
-          <div class="choice-container">
-            <p class="choice-prefix">D</p>
-            <p class="choice-text" data-number="4"></p>
-          </div>
           <div id="explanation"></div>
+          <div class="col2">
+            <div id='choice1' class="choice-container">
+              <p class="choice-prefix"></p>
+              <p class="choice-text draggable" data-number="1"></p>
+            </div>
+            <div id='choice2' class="choice-container">
+              <p class="choice-prefix"></p>
+              <p class="choice-text draggable" data-number="2"></p>
+            </div>
+            <div id='choice3' class="choice-container">
+              <p class="choice-prefix"></p>
+              <p class="choice-text" data-number="3"></p>
+            </div>
+            <div id='choice4' class="choice-container">
+              <p class="choice-prefix"></p>
+              <p class="choice-text" data-number="4"></p>
+            </div>
+            <div id='choice5' class="choice-container">
+              <p class="choice-prefix"></p>
+              <p class="choice-text" data-number="5"></p>
+            </div>
+            <div id='choice6' class="choice-container">
+              <p class="choice-prefix"></p>
+              <p class="choice-text" data-number="6"></p>
+            </div>
+            <div id='choice7' class="choice-container">
+              <p class="choice-prefix"></p>
+              <p class="choice-text" data-number="7"></p>
+            </div>
+            <div id='choice8' class="choice-container">
+              <p class="choice-prefix"></p>
+              <p class="choice-text" data-number="8"></p>
+            </div>
+          </div>
+          <div class="drag-parent col2 hidden">
+            <div class="drag-origin hidden">
+              <div id="draggable-1" class="draggable choice-text" data-number="1" draggable="true" ondragstart="onDragStart(event);"
+              >
+                draggable
+              </div>
+              <div
+                id="draggable-2"
+                class="example-draggable choice-text" data-number="2"
+                draggable="true"
+                ondragstart="onDragStart(event);"
+              >
+                draggable
+              </div>
+              <div
+                id="draggable-3"
+                class="example-draggable choice-text" data-number="3"
+                draggable="true"
+                ondragstart="onDragStart(event);"
+              >
+                draggable
+              </div>
+              <div
+                id="draggable-4"
+                class="example-draggable choice-text" data-number="4"
+                draggable="true"
+                ondragstart="onDragStart(event);"
+              >
+                draggable
+              </div>
+              <div
+                id="draggable-5"
+                class="example-draggable choice-text" data-number="5"
+                draggable="true"
+                ondragstart="onDragStart(event);"
+              >
+                draggable
+              </div>
+              <div
+                id="draggable-6"
+                class="draggable choice-text" data-number="6"
+                draggable="true"
+                ondragstart="onDragStart(event);"
+              >
+                draggable
+              </div>
+            </div>
+          <div class="hidden">
+
+            <div
+              class="example-dropzone"
+              ondragover="onDragOver(event);"
+              ondrop="onDrop(event);"
+            >
+              dropzone
+            </div>
+            <div
+            class="example-dropzone"
+            ondragover="onDragOver(event);"
+            ondrop="onDrop(event);"
+            >
+              dropzone
+            </div>
+            <div
+            class="example-dropzone"
+            ondragover="onDragOver(event);"
+            ondrop="onDrop(event);"
+          >
+          dropzone
+          </div>
+              <div
+              class="example-dropzone"
+              ondragover="onDragOver(event);"
+              ondrop="onDrop(event);"
+            >
+              dropzone
+            </div>
+            <div
+              class="example-dropzone"
+              ondragover="onDragOver(event);"
+              ondrop="onDrop(event);"
+            >
+              dropzone
+            </div>
+            <div
+            class="example-dropzone"
+            ondragover="onDragOver(event);"
+            ondrop="onDrop(event);"
+          >
+            dropzone
+          </div>
+          </div>
+          </div>
         </div>
       </div>
     </main>
+    <script src="script.js"></script>
     <script src="game.js"></script>
   </body>
 </html>
