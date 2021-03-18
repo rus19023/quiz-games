@@ -7,8 +7,8 @@ body {
 .hidden { display: none; }
 
 .btn {
-  font-size: 1.1rem;
-  padding: .4rem;
+  font-size: .75rem;
+  padding: .25rem;
 }
 
 p {
@@ -27,7 +27,6 @@ img {
 
 .center {
   text-align: center;
-  padding: 1rem;
 }
 
 button {
@@ -44,11 +43,11 @@ button {
 }
 
 h1 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 h2 {
-  font-size: 1.4rem;
+  font-size: 1.25rem;
 }
 
 .highlight { color: #ffd700; }
@@ -89,7 +88,7 @@ ul li, ol li {
 }
 
 .choice-prefix {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   background: #ffffff;
   color: #6c7f94;
@@ -108,7 +107,6 @@ ul li, ol li {
 }
 
 .select-game {
-  margin-top: .5rem;
   padding: .5rem;
 }
 
