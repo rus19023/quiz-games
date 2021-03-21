@@ -42,7 +42,8 @@ startGame = () => {
     
     getNewQuestion();
     game.classList.remove('hidden');
-    loader.classList.add('hidden');
+    loader.classList.add('hidden');           
+    explanation.classList.add('hidden');
     //localStorage.clear();
 };
 var questions = [];
@@ -64,7 +65,7 @@ fetch(jsonFile)
     .then((loadedQuestions) => {
         questions = loadedQuestions.data.map((loadedQuestion) => {            
             const formattedQuestion = {
-                question: loadedQuestion.question + "&nbsp;&nbsp;<br><br>(From Section " + loadedQuestion.section + " Question # " + loadedQuestion.qnum +")",
+                question: loadedQuestion.question + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(From Section " + loadedQuestion.section + ", Question # " + loadedQuestion.qnum +")",
                 explanation: loadedQuestion.explanation,
                 exam: loadedQuestion.difficulty,
                 quiz: loadedQuestion.type,
@@ -119,7 +120,8 @@ fetch(jsonFile)
         console.error(err);
     });
 
-    getNewQuestion = () => {
+    getNewQuestion = () => {           
+        explanation.classList.add('hidden');
         // if number of questions is maxed out, save score and end game
         if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
             localStorage.setItem('mostRecentScore', score);
@@ -198,9 +200,9 @@ choices.forEach((choice) => {
                 } // end feedback switch
             }  //  end of if lastcorrect
         } else {  // if answer not correct 
-            // show explanation to learn correct answer           
-            explanation.classList.add('hidden');
-            explanation.innerHTML = "<br>Explanation: " + currentQuestion.explanation;
+            // show explanation to learn correct answer
+            explanation.innerHTML = "<br>Explanation: " + currentQuestion.explanation;           
+            explanation.classList.remove('hidden');
             // set number of consecutive correct answers back to zero
             consecutiveCorrect = 0;
             bonusText = "Uh Oh, starting over! Don't give up, try again!";
@@ -217,7 +219,7 @@ choices.forEach((choice) => {
         setTimeout(() => {
             // remove red or green color
             selectedChoice.parentElement.classList.remove(classToApply);
-        }, 4000);
+        }, 2500);
         
         nextButton.classList.remove('hidden');
         

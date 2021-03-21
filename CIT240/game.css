@@ -154,11 +154,13 @@ ul li, ol li {
 .hud-prefix {
   text-align: center;
   font-size: 1.2rem;
+  color: #ffd700;
 }
 
 .hud-main-text {
   text-align: center;
   padding: 1rem;
+  color: #ffd700;
 }
 
 #progressBar {
@@ -188,14 +190,13 @@ ul li, ol li {
   background: #ffffff;
   color: #274b74;
   text-align: center;
-  padding: 02rem 1rem;
+  padding: 2rem 1rem;
   margin:.2rem;
   vertical-align: middle;
-
 }
 
 .choice-text {
-  padding: .25rem;
+  padding: 1rem;
   margin: auto;
   color: #f8f5ca;
   font-size: 1rem;
