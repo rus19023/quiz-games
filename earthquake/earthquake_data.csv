@@ -1,4 +1,4 @@
-time,latitude,longitude,depth,mag,magType,nst,gap,dmin,rms,net,id,updated,,type,horizontalError,depthError,magError,magNst,status,locationSource,magSource
+time,latitude,longitude,depth,mag,magType,nst,gap,dmin,rms,net,id,updated,place,type,horizontalError,depthError,magError,magNst,status,locationSource,magSource
 2020-01-24T10:47:52.399Z,16.3318,-97.0254,35,4.9,mb,,165,1.916,1.17,us,us60007elk,2020-01-24T12:56:56.968Z,"21km WSW of San Vicente Coatlan, Mexico",earthquake,8.3,1.9,0.027,423,reviewed,us,us
 2020-01-24T07:24:18.747Z,36.7365,5.6009,9.2,4.9,mww,,48,3.189,0.92,us,us60007eif,2020-01-24T11:35:27.173Z,"17km WSW of Jijel, Algeria",earthquake,6.5,4.5,0.08,15,reviewed,us,us
 2020-01-24T07:14:24.684Z,39.2257,71.662,10,5,mb,,55,0.28,1,us,us60007eii,2020-01-24T07:33:59.040Z,"11km E of Karakenja, Tajikistan",earthquake,5.7,1.8,0.08,50,reviewed,us,us
