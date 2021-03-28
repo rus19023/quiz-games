@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Drag-and-Drop Example</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body { background: grey;}
+        .example-parent {
+        border: 2px solid #DFA612;
+        background: pink;
+        color: black;
+        display: flex;
+        font-family: sans-serif;
+        font-weight: bold;
+        }
+
+        .example-origin {
+        flex-basis: 100%;
+        flex-grow: 1;
+        padding: 10px;
+        }
+
+        .example-draggable {
+        background-color: #4AAE9B;
+        font-weight: normal;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        padding: 10px;
+        }
+
+        .example-dropzone {
+        background-color: #6DB65B;
+        flex-basis: 100%;
+        flex-grow: 1;
+        padding: 10px;
+        }
+    </style>
+  </head>
+  <body>
+
+    <div class="example-parent">
+        <div class="example-origin">
+          <div
+            id="draggable-1"
+            class="example-draggable"
+            draggable="true"
+            ondragstart="onDragStart(event);"
+          >
+            draggable
+          </div>
+          <div
+            id="draggable-2"
+            class="example-draggable"
+            draggable="true"
+            ondragstart="onDragStart(event);"
+          >
+            draggable
+          </div>
+          <div
+            id="draggable-3"
+            class="example-draggable"
+            draggable="true"
+            ondragstart="onDragStart(event);"
+          >
+            draggable
+          </div>
+          <div
+            id="draggable-4"
+            class="example-draggable"
+            draggable="true"
+            ondragstart="onDragStart(event);"
+          >
+            draggable
+          </div>
+          <div
+            id="draggable-5"
+            class="example-draggable"
+            draggable="true"
+            ondragstart="onDragStart(event);"
+          >
+            draggable
+          </div>
+          <div
+            id="draggable-6"
+            class="example-draggable"
+            draggable="true"
+            ondragstart="onDragStart(event);"
+          >
+            draggable
+          </div>
+        </div>
+      
+        <div
+          class="example-dropzone"
+          ondragover="onDragOver(event);"
+          ondrop="onDrop(event);"
+        >
+          dropzone
+        </div>
+      </div>
+      <script src="script.js"></script>
+  </body>
+</html>
