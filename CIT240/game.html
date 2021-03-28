@@ -11,11 +11,11 @@
   <body>
     <header>
       <div class="col2">
-        <h3 class="center highlight">Questions for Exam 3 only</h3>
+        <h3 class="center highlight">Questions for QUIZ 7 only</h3>
         <div class="select-game">
           <form action="POST" action="game.html">
             <select name="chooseGame" id="chooseGame" class="btn">
-              <option value="exam3.json" selected="selected" >Select game</option>
+              <option value="quiz7.json" selected="selected" >Select game</option>
               <option value="quiz1.json">Quiz 1</option>
               <option value="quiz2.json">Quiz 2</option>
               <option value="quiz3.json">Quiz 3</option>
@@ -61,7 +61,7 @@
         <div id="game" class="justify-center hidden">
           <div id="question" class="question">What is the answer to this question?</div>
           <div class="col3">
-            <button id="easymode" class='btn' onclick="setEasyMode()">Hint (no score)</button>
+            <button id="hint" class='btn' onclick="showHint()">Hint (no score)</button>
             <div></div>
             <button id="next-button" type="button" class="btn hidden" onclick="getNewQuestion()">Next Question</button>
           </div>

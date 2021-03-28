@@ -1,4 +1,10 @@
+// original code by James Quick found at https://github.com/jamesqquick/Build-A-Quiz-App-With-HTML-CSS-and-JavaScript 
+
 // TODO:  push selected plural answers to array, then check against correct answer array?
+//        font color for "you got bonus" changes to hotpink,
+//        draggables-finish,
+//        borders, radii, more grid to use space better?
+//        
 
 //CONSTANTS
 const CORRECT_BONUS = 1000;
@@ -74,7 +80,7 @@ fetch(jsonFile)
                 correct: loadedQuestion.correct_answer,
                 qnum: loadedQuestion.qnum  
             };
-            setEasyMode = () => {      
+            showHint = () => {      
                 explanation.innerHTML = "<br>Explanation: " + currentQuestion.explanation;      
                 explanation.classList.remove('hidden');
                 easyMode = true;
@@ -90,6 +96,7 @@ fetch(jsonFile)
             
             // set variable for correct answer
             correctAnswer = loadedQuestion.correct_answer;
+            //correctAnswers = [...loadedQuestion.correct_answers];
             //  console.log("correctAnswer " + correctAnswer);
             //questions = loadedQuestions;
             console.log("questions.length: "+ questions.length);
@@ -179,8 +186,9 @@ choices.forEach((choice) => {
                 // bonuses for consecutive correct answers!
                 // start feedback selection, show bonus text to give feedback when consecutive count is multiple of 4
                 switch (consecutiveCorrect > 0 && consecutiveCorrect % 4) {
-                    case 0:
-                        bonusText = "You did it!!!  You got the bonus!";
+                    case 0:                        
+                        bonus.classList.add('hotpink');
+                        bonusText = " You did it!!!  You got the bonus!"; 
                         //incrementScore(CORRECT_BONUS * 4);                    
                         incrementScore(CORRECT_BONUS * 5 * bonusesReached);
                         bonusesReached++;
@@ -212,6 +220,7 @@ choices.forEach((choice) => {
         if (consecutiveCorrect === 0) {
         }
         bonus.innerText = bonusText;
+        bonus.innerHTML = bonusText.fontcolor("hotpink");
         console.log(" questionCounter: " + questionCounter + '  consecutiveCorrect: ' + consecutiveCorrect );
         
         selectedChoice.parentElement.classList.add(classToApply);
