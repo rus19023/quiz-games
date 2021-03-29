@@ -65,7 +65,7 @@
             "question":"<div class='question col2'><div><img src='images/7.8-4.png' alt='image for section 7.8 Question # 04'></div><div class='question'> Use the Exhibit to answer this question. Your network has four VLANs with multiple computers in each VLAN. You want to enable interVLAN routing.<br>How must you assign the IP addresses for each VLAN? </div></div>",
             "correct_answer":"All the computers within the same VLAN must belong to the same IP subnet.",
             "explanation":"All the computers within the same VLAN must belong to the same IP subnet.",
-            "incorrect_answers":["All the computers within the same VLAN must belong to separate IP subnets.","There is nothing you can do, communication cannot occur between VLANs.", "All the computers within the same VLAN must belong to the same IP subnet."],
+            "incorrect_answers":["All the computers within the same VLAN must belong to separate IP subnets.","There is nothing you can do, communication cannot occur between VLANs.", "All the computers in all the VLANs must belong to the same IP subnet."],
             "correct_answers":["All the computers within the same VLAN must belong to the same IP subnet."]
          },
         {  "category":"WEEK12",
@@ -142,7 +142,7 @@
             "qnum":"06",
             "question":"You need to enable the Security feature set on a router. <br>  You visited the Cisco website to purchase the feature set and create a product authorization key (PAK). Cisco emailed you a license file (FTX1788948P_201304123432565291.lic), which you copied to a USB drive. You connected the USB drive to the device and now need to install the license. <br>  Which are the correct set of commands you should use to accomplish this?",
             "correct_answer":"license install usbflash1:FTX1788948P_201304123432565291.lic<br><br>reload",
-            "explanation":"To enable a feature set, you need to install the license and then reload the router. This is done using the following commands in this scenario: <ul><li> license install usbflash1:FTX1788948P_201304123432565291.lic  <ul><li> reload </li></ul>The license boot module c2900 technology-package securityk9 command enables the Security feature set, but it uses a 60-day evaluation license. The license install c2900 technology-package securityk9 and the license boot module c2900 technology-package securityk9 usbflash1:FTX1788948P_201304123432565291.lic commands use incorrect command syntax.",
+            "explanation":"To enable a feature set, you need to install the license and then reload the router. This is done using the following commands in this scenario: <ul><li> license install usbflash1:FTX1788948P_201304123432565291.lic  </li><li> reload </li></ul>The license boot module c2900 technology-package securityk9 command enables the Security feature set, but it uses a 60-day evaluation license. The license install c2900 technology-package securityk9 and the license boot module c2900 technology-package securityk9 usbflash1:FTX1788948P_201304123432565291.lic commands use incorrect command syntax.",
             "incorrect_answers":["license boot module c2900 technology-package securityk9<br><br>reload"," usbflash1:FTX1788948P_201304123432565291.lic<br><br>reload","license install c2900 technology-package securityk9<br><br>  reload"],
             "correct_answers":["","",""]
         },    
@@ -153,18 +153,18 @@
             "qnum":"03",
             "question":"You are configuring NetFlow on a router. You want to monitor both incoming and outgoing traffic on an interface. <br> You've used the interface command to allow you to configure the interface. What set of commands should you use next ? ",
             "correct_answer":"ip flow egress<br><br>ip flow ingress",
-            "explanation":"Use the ip flow interface configuration command to enable NetFlow monitoring on a router interface. Specifying ingress with this command configures NetFlow to monitor incoming packets on the interface. Specifying egress with this command configures NetFlow to monitor outgoing packets on the interface. <br><br>Use the ip flow-export destination <address> <port> command to configure the router to export NetFlow records to the NetFlow Collector configured with the IP address and UDP port specified. Use the ip flow-export source <interface> command to specify the interface on the router to use as the source of the packets sent to the NetFlow connector. The ip flow-import source <interface> command is not a valid NetFlow command.",
-            "incorrect_answers":["ip flow-export destination <address> <port><br><br>ip flow egress","ip flow-export source <interface><br><br>ip flow ingress","ip flow-import source <interface><br><br>ip flow egress"],
+            "explanation":"Use the ip flow interface configuration command to enable NetFlow monitoring on a router interface. Specifying ingress with this command configures NetFlow to monitor incoming packets on the interface. Specifying egress with this command configures NetFlow to monitor outgoing packets on the interface. <br><br>Use the ip flow-export destination <address> <port> command to configure the router to export NetFlow records to the NetFlow Collector configured with the IP address and UDP port specified. Use the ip flow-export source '<interface>' command to specify the interface on the router to use as the source of the packets sent to the NetFlow connector. The ip flow-import source '<interface>' command is not a valid NetFlow command.",
+            "incorrect_answers":["ip flow-export destination \"<\"address> <port>\"<br><br>ip flow egress","ip flow-export source '<interface>'<br><br>ip flow ingress","ip flow-import source '<interface>'<br><br>ip flow egress"],
             "correct_answers":["","",""]
         },
         {  "category":"WEEK12",
             "type":"QUIZ7",
             "difficulty":"FINALEXAM",
-            "section":"9.2",
+            "section":"9.3",
             "qnum":"04",
             "question":"You are configuring NetFlow on a router. Rather than storing records locally, you want to configure the router to redirect NetFlow records to a NetFlow Collector system in your network with an IP address of 172.17.8.25 listening on UDP port 2055. <br>Which command should you use?",
             "correct_answer":"ip flow-export destination 172.17.8.25 2055",
-            "explanation":"Use the ip flow-export destination <address> <port> command to configure the router to export NetFlow records to a NetFlow Collector configured with the IP address and UDP port specified. In this example, you would enter ip flow-export destination 172.17.8.25 2055.<br>Use the ip flow-export source <interface> command to specify the interface on the router to use as the source of the packets sent to the NetFlow connector. Use the ip flow ingress | egress interface configuration command to enable NetFlow monitoring on a router interface. Use the ip flow-export version <number> command to format records using the specified NetFlow version number. The ip flow-export collector 172.17.8.25 2055 command uses an invalid option (collector).",
+            "explanation":"Use the ip flow-export destination \"<address> <port>\" command to configure the router to export NetFlow records to a NetFlow Collector configured with the IP address and UDP port specified. In this example, you would enter ip flow-export destination 172.17.8.25 2055.<br>Use the ip flow-export source '<interface>' command to specify the interface on the router to use as the source of the packets sent to the NetFlow connector. Use the ip flow ingress | egress interface configuration command to enable NetFlow monitoring on a router interface. Use the ip flow-export version <number> command to format records using the specified NetFlow version number. The ip flow-export collector 172.17.8.25 2055 command uses an invalid option (collector).",
             "incorrect_answers":["ip flow 172.17.8.25 2055","ip flow-export collector 172.17.8.25 2055","ip flow-export version 172.17.8.25 2055"],
             "correct_answers":["","",""]
         }

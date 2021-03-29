@@ -48,6 +48,13 @@ img {
 .col2 {
   display: grid;
   grid-template-columns: 1fr;
+  padding: 0 .25rem;
+  justify-items: center;
+}
+
+.col-nochange {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   padding: .5rem;
   justify-items: center;
 }
@@ -64,32 +71,29 @@ img {
 .choice-container {
   width: 100%;
   display: flex;
-  margin-bottom: .5rem;
+  margin-bottom: .25rem;
   font-size: 1.5rem;
-  border: 0.1rem solid #ffffff;
-  background: #274b74;
+  border: 1px solid #ffffff;
 }
 
 .choice-container:hover {
   cursor: pointer;
-  box-shadow: 0 0.4rem .7rem 0 #ffffff;
-  transform: translateY(-0.1rem);
-  transition: transform 150ms;
+}
+
+.choice-text {
+  width: 100%;
+  text-align: left;
+  color: #caeff8;
+  font-size: 1rem;
 }
 
 .hotpink {
   color: hotpink;
 }
 
-main {
-  margin-top: .5rem;
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-#bonus-text {
-  color: #ffffff;
+#bonus-text { 
   font-size: 1.5rem;
+  padding: .5rem;
   font-weight: bold;
   text-align: center;
   margin-top: 1rem;
@@ -98,10 +102,9 @@ main {
 ul li, ol li {
   font-size: 1rem;
   margin-left: 1rem;
-  line-height: 1rem;
+  line-height: 1.2rem;
   list-style: none;
 }
-
 
 .select-game {
   padding: .5rem;
@@ -138,14 +141,14 @@ ul li, ol li {
 
 .incorrect {
   background: #dc3545;
-  color: #ffffff;
+  color: #ffffff i !important;
 }
 
 #explanation, #explanation ul li, #explanation ol li {
   font-size: 1rem;
   color: yellow;
   list-style: circle;
-  padding: .25rem;
+  padding: .5rem;
 }
 
 /* HUD */
@@ -187,23 +190,6 @@ ul li, ol li {
   width: 12rem;
   height: 12rem;
   animation: spin 2s linear infinite;
-}
-
-.choice-prefix {
-  font-size: 1.2rem;
-  background: #ffffff;
-  color: #274b74;
-  text-align: center;
-  padding: 2rem 1rem;
-  margin:.2rem;
-  vertical-align: middle;
-}
-
-.choice-text {
-  padding: 1rem;
-  margin: auto;
-  color: #f8f5ca;
-  font-size: 1rem;
 }
 
 @keyframes spin {

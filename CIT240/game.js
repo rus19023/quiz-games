@@ -1,10 +1,10 @@
-// original code by James Quick found at https://github.com/jamesqquick/Build-A-Quiz-App-With-HTML-CSS-and-JavaScript 
+// original code by James Quick found at https://github.com/jamesqquick/             Build-A-Quiz-App-With-HTML-CSS-and-JavaScript 
 
 // TODO:  push selected plural answers to array, then check against correct answer array?
 //        font color for "you got bonus" changes to hotpink,
 //        draggables-finish,
 //        borders, radii, more grid to use space better?
-//        
+//          
 
 //CONSTANTS
 const CORRECT_BONUS = 1000;
@@ -149,6 +149,13 @@ fetch(jsonFile)
         choices.forEach((choice) => {
             // randomize possible answers
             const number = choice.dataset['number'];
+            console.log("choice.parentElement.classList: " + choice.parentElement.classList);
+            if(choice.parentElement.classList.contains('correct')) {
+                choice.parentElement.classList.remove('correct');
+            };
+            if(choice.parentElement.classList.contains('incorrect')) {
+                choice.parentElement.classList.remove('incorrect');
+            };
             // display the possible answers
             choice.innerHTML = currentQuestion['choice' + number];
         });
@@ -160,10 +167,10 @@ fetch(jsonFile)
 //debugger;
 // process answer choice that was clicked
 choices.forEach((choice) => {
-    console.log('choice: ' + choice);
+       
     choice.addEventListener('click', (e) => {
-        choice.classList.remove('correct');
-        choice.classList.remove('incorrect');
+        //console.log("getElementById('choice1').classList" + getElementById('choice1').classList);
+        //console.log("choice.classList: " + choice.classList);
         if (!acceptingAnswers) return;
             // answer was clicked on, don't allow any more clicks
             acceptingAnswers = false;
@@ -175,62 +182,54 @@ choices.forEach((choice) => {
             const classToApply =
             selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
             // if answer is correct
-        if (classToApply === 'correct') {
-            // set last-answer-correct variable to true so it can be counted for consecutive bonus
-            lastCorrect = true;
-            // add this correct answer to consecutive total
-            if (lastCorrect) {
-                consecutiveCorrect ++;
-                // add points for correct answer
-                incrementScore(CORRECT_POINTS);                
-                // bonuses for consecutive correct answers!
-                // start feedback selection, show bonus text to give feedback when consecutive count is multiple of 4
-                switch (consecutiveCorrect > 0 && consecutiveCorrect % 4) {
-                    case 0:                        
-                        bonus.classList.add('hotpink');
-                        bonusText = " You did it!!!  You got the bonus!"; 
-                        //incrementScore(CORRECT_BONUS * 4);                    
-                        incrementScore(CORRECT_BONUS * 5 * bonusesReached);
-                        bonusesReached++;
-                        break;
-                    case 1:
-                        bonusText = "Great start!  Only 3 more to go for your next bonus!";
-                        break;
-                    case 2:
-                        bonusText = "You're getting there! Only 2 more to go for your next bonus!";
-                        break;
-                    case 3:
-                        bonusText = "You got this!  Only 1 more to go for your next bonus!";
-                        break;
-                    default:
-                        bonusText = "You'll get that bonus yet! Keep going!";
-                        break;
-                } // end feedback switch
-            }  //  end of if lastcorrect
-        } else {  // if answer not correct 
-            // show explanation to learn correct answer
-            explanation.innerHTML = "<br>Explanation: " + currentQuestion.explanation;           
-            explanation.classList.remove('hidden');
-            // set number of consecutive correct answers back to zero
-            consecutiveCorrect = 0;
-            bonusText = "Uh Oh, starting over! Don't give up, try again!";
-            // set last answer correct to false so it won't be counted for consecutive bonus
-            lastCorrect = false;
-        }  //  end of if answer is correct
-        if (consecutiveCorrect === 0) {
-        }
-        bonus.innerText = bonusText;
-        bonus.innerHTML = bonusText.fontcolor("hotpink");
-        console.log(" questionCounter: " + questionCounter + '  consecutiveCorrect: ' + consecutiveCorrect );
-        
-        selectedChoice.parentElement.classList.add(classToApply);
-        
-        setTimeout(() => {
-            // remove red or green color
-            selectedChoice.parentElement.classList.remove(classToApply);
-        }, 2500);
-        
-        nextButton.classList.remove('hidden');
+            if (classToApply === 'correct') {
+                // set last-answer-correct variable to true so it can be counted for consecutive bonus
+                lastCorrect = true;
+                // add this correct answer to consecutive total
+                if (lastCorrect) {
+                    consecutiveCorrect ++;
+                    // add points for correct answer
+                    incrementScore(CORRECT_POINTS);                
+                    // bonuses for consecutive correct answers!
+                    // start feedback selection, show bonus text to give feedback when consecutive count is multiple of 4
+                    switch (consecutiveCorrect > 0 && consecutiveCorrect % 4) {
+                        case 0:
+                            bonusText = " You did it!!!  You got the bonus!"; 
+                            //incrementScore(CORRECT_BONUS * 4);                    
+                            incrementScore(CORRECT_BONUS * 5 * bonusesReached);
+                            bonusesReached++;
+                            break;
+                        case 1:
+                            bonusText = "Great start!<br>3 more to go for your next bonus!";
+                            break;
+                        case 2:
+                            bonusText = "You're getting there! <br> 2 more to go for your next bonus!";
+                            break;
+                        case 3:
+                            bonusText = "You got this!  <br> 1 more to go for your next bonus!";
+                            break;
+                        default:
+                            bonusText = "You'll get that bonus yet!<br> Keep going!";
+                            break;
+                    } // end feedback switch
+                }  //  end of if lastcorrect
+            } else {  // if answer not correct 
+                // show explanation to learn correct answer
+                explanation.innerHTML = "<br>Explanation: " + currentQuestion.explanation;           
+                explanation.classList.remove('hidden');
+                // set number of consecutive correct answers back to zero
+                consecutiveCorrect = 0;
+                bonusText = "Uh Oh, starting over! Don't give up, try again!";
+                // set last answer correct to false so it won't be counted for consecutive bonus
+                lastCorrect = false;
+            }  //  end of if answer is correct
+            if (consecutiveCorrect === 0) {
+            }
+            bonus.innerText = bonusText;
+            bonus.innerHTML = bonusText.fontcolor("hotpink");
+            console.log(" questionCounter: " + questionCounter + '  consecutiveCorrect: ' + consecutiveCorrect );            
+            selectedChoice.parentElement.classList.add(classToApply);
+            nextButton.classList.remove('hidden');
         
         //return window.location.assign('#next-button');        
     });  // end choice event listener
